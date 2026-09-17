@@ -630,105 +630,6 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-gitintegration-api
-  name: Azure Synapse Analytics GitIntegration API
-  description: The GitIntegration API from Azure Synapse Analytics — 1 operation(s) for gitintegration.
-  humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
-  baseURL: https://management.azure.com
-  tags:
-  - Git Integration
-  tags_raw:
-  - GitIntegration
-  properties:
-  - type: OpenAPI
-    url: openapi/microsoft-azure-synapse-analytics-gitintegration-api-openapi.yml
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
-  - type: Swagger
-    url: >-
-      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-workspace-schema.json
-  - type: JSONLD
-    url: json-ld/azure-synapse-analytics-context.jsonld
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-sql-pool-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-spark-pool-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-pipeline-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-spark-batch-job-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-role-assignment-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-notebook-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-dataset-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-linked-service-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-trigger-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-firewall-rule-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/keys
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
 - aid: >-
     microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-integrationruntimes-api
   name: Azure Synapse Analytics IntegrationRuntimes API
@@ -1898,105 +1799,6 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: >-
-    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-privateendpointconnections-api
-  name: Azure Synapse Analytics PrivateEndpointConnections API
-  description: >-
-    The PrivateEndpointConnections API from Azure Synapse Analytics — 2 operation(s) for privateendpointconnections.
-  humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
-  baseURL: https://management.azure.com
-  tags:
-  - PrivateEndpointConnections
-  properties:
-  - type: OpenAPI
-    url: openapi/microsoft-azure-synapse-analytics-privateendpointconnections-api-openapi.yml
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
-  - type: Swagger
-    url: >-
-      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-workspace-schema.json
-  - type: JSONLD
-    url: json-ld/azure-synapse-analytics-context.jsonld
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-sql-pool-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-spark-pool-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-pipeline-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-spark-batch-job-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-role-assignment-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-notebook-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-dataset-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-linked-service-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-trigger-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-firewall-rule-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/keys
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
 - aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-privatelinkhubs-api
   name: Azure Synapse Analytics PrivateLinkHubs API
   description: >-
@@ -2008,106 +1810,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/microsoft-azure-synapse-analytics-privatelinkhubs-api-openapi.yml
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
-  - type: Swagger
-    url: >-
-      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-workspace-schema.json
-  - type: JSONLD
-    url: json-ld/azure-synapse-analytics-context.jsonld
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-sql-pool-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-spark-pool-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-pipeline-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-spark-batch-job-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-role-assignment-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-notebook-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-dataset-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-linked-service-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-trigger-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-firewall-rule-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/keys
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-roleassignments-api
-  name: Azure Synapse Analytics RoleAssignments API
-  description: >-
-    The RoleAssignments API from Azure Synapse Analytics — 2 operation(s) for roleassignments.
-  humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
-  baseURL: https://management.azure.com
-  tags:
-  - Role Assignments
-  tags_raw:
-  - RoleAssignments
-  properties:
-  - type: OpenAPI
-    url: openapi/microsoft-azure-synapse-analytics-roleassignments-api-openapi.yml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
@@ -2599,105 +2301,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/microsoft-azure-synapse-analytics-sqlpoolrestorepoints-api-openapi.yml
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
-  - type: Swagger
-    url: >-
-      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-workspace-schema.json
-  - type: JSONLD
-    url: json-ld/azure-synapse-analytics-context.jsonld
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-sql-pool-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-spark-pool-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-pipeline-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-spark-batch-job-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-role-assignment-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-notebook-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-dataset-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-linked-service-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-trigger-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules
-  - type: JSONSchema
-    url: json-schema/azure-synapse-analytics-firewall-rule-schema.json
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/keys
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sqlpools-api
-  name: Azure Synapse Analytics SqlPools API
-  description: The SqlPools API from Azure Synapse Analytics — 4 operation(s) for sqlpools.
-  humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
-  baseURL: https://management.azure.com
-  tags:
-  - SQL Pools
-  tags_raw:
-  - SqlPools
-  properties:
-  - type: OpenAPI
-    url: openapi/microsoft-azure-synapse-analytics-sqlpools-api-openapi.yml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
@@ -3384,6 +2987,399 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/microsoft-azure-synapse-analytics-workspaces-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
+  - type: Swagger
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-workspace-schema.json
+  - type: JSONLD
+    url: json-ld/azure-synapse-analytics-context.jsonld
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-sql-pool-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-spark-pool-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-pipeline-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-spark-batch-job-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-role-assignment-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-notebook-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-dataset-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-linked-service-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-trigger-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-firewall-rule-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/keys
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
+- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-git-integration-api
+  name: Azure Synapse Analytics Git Integration API
+  description: >-
+    The Git Integration API from Azure Synapse Analytics — 1 operation(s) for git integration.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
+  baseURL: https://management.azure.com
+  tags:
+  - Git Integration
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-synapse-analytics-git-integration-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
+  - type: Swagger
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-workspace-schema.json
+  - type: JSONLD
+    url: json-ld/azure-synapse-analytics-context.jsonld
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-sql-pool-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-spark-pool-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-pipeline-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-spark-batch-job-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-role-assignment-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-notebook-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-dataset-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-linked-service-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-trigger-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-firewall-rule-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/keys
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-private-endpoint-connections-api
+  name: Azure Synapse Analytics Private Endpoint Connections API
+  description: >-
+    The Private Endpoint Connections API from Azure Synapse Analytics — 2 operation(s) for private endpoint
+    connections.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
+  baseURL: https://management.azure.com
+  tags:
+  - Private Endpoint Connections
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-synapse-analytics-private-endpoint-connections-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
+  - type: Swagger
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-workspace-schema.json
+  - type: JSONLD
+    url: json-ld/azure-synapse-analytics-context.jsonld
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-sql-pool-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-spark-pool-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-pipeline-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-spark-batch-job-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-role-assignment-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-notebook-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-dataset-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-linked-service-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-trigger-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-firewall-rule-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/keys
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
+- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-role-assignments-api
+  name: Azure Synapse Analytics Role Assignments API
+  description: >-
+    The Role Assignments API from Azure Synapse Analytics — 2 operation(s) for role assignments.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
+  baseURL: https://management.azure.com
+  tags:
+  - Role Assignments
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-synapse-analytics-role-assignments-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
+  - type: Swagger
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-workspace-schema.json
+  - type: JSONLD
+    url: json-ld/azure-synapse-analytics-context.jsonld
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-sql-pool-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-spark-pool-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-pipeline-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-spark-batch-job-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-role-assignment-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-notebook-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-dataset-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-linked-service-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-trigger-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules
+  - type: JSONSchema
+    url: json-schema/azure-synapse-analytics-firewall-rule-schema.json
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/keys
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
+- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sql-pools-api
+  name: Azure Synapse Analytics SQL Pools API
+  description: The SQL Pools API from Azure Synapse Analytics — 4 operation(s) for sql pools.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
+  baseURL: https://management.azure.com
+  tags:
+  - SQL Pools
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-synapse-analytics-sql-pools-api-openapi.yml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
