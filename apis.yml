@@ -3417,6 +3417,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
 common:
+- type: Plans
+  url: plans/microsoft-azure-synapse-analytics-plans-pricing.yml
 - type: CapabilityMap
   url: capabilities/microsoft-azure-synapse-analytics-capability-edges.yml
   name: Azure Synapse Analytics Business Capability Map

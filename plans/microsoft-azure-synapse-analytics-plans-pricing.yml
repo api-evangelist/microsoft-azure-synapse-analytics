@@ -1,183 +1,69 @@
-specification: API Commons Plans
-specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
-provider: Azure Synapse Analytics
-providerId: microsoft-azure-synapse-analytics
-created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: true
-tags:
-  - Analytics
-  - Apache Spark
-  - Big Data
-  - Data Integration
-  - Data Warehouse
-  - ETL
-  - SQL
-description: Azure Synapse Analytics is consumption-priced per compute resource family —
-  Dedicated SQL Pool (DWU-hour, hourly), Serverless SQL Pool (per TB processed), Apache Spark
-  Pool (vCore-hour), and Data Integration / Pipelines (per orchestration activity-run +
-  per-DIU-hour). Storage is billed separately via Azure Data Lake Storage Gen2. Reserved
-  capacity discounts of up to ~65% available for 1-year and 3-year commitments on Dedicated
-  SQL Pools. Microsoft is steering new workloads to Microsoft Fabric.
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/
 sources:
-  - https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/
-  - https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is
+- https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/
+provenance:
+  tool: planning/api-economics/harvest_pricing.py
+  run: 20260920T120546
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+published: true
+note: 'Nearly all unit rates on the page render as "$-" placeholders (region/currency selector did not
+  populate), e.g. serverless "$- per TB of data processed", Spark "$- per vCore-hour", DWU tables. The
+  only numeric prices shown are the Synapse Commit Unit pre-purchase tiers, captured above. Free-account
+  mention: "$200 credit to explore Azure for 30 days".'
+plan_count: 6
+currency: USD
 plans:
-  - id: microsoft-azure-synapse-dedicated-sql
-    name: Dedicated SQL Pool (DWU)
-    type: usage-based
-    description: Provisioned data warehouse compute billed per DWU-hour. Sizes from DW100c to
-      DW30000c. Storage billed separately at $122.88 per TB per month.
-    entries:
-      - label: DW100c (100 DWU)
-        name: dw100c_hour
-        type: metered
-        metric: hour
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '$1.51 per hour'
-        userMultiplied: false
-      - label: DW1000c (1000 DWU)
-        name: dw1000c_hour
-        type: metered
-        metric: hour
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '$15.10 per hour'
-        userMultiplied: false
-      - label: DW30000c (30000 DWU)
-        name: dw30000c_hour
-        type: metered
-        metric: hour
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '$453.06 per hour'
-        userMultiplied: false
-      - label: Storage
-        name: dwh_storage
-        type: metered
-        metric: TB-month
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: '$122.88 per TB per month'
-        userMultiplied: false
-    elements:
-      - name: Pause / resume to save cost
-      - name: 1-year and 3-year reserved capacity
-      - name: Geo-redundant backups
-  - id: microsoft-azure-synapse-serverless-sql
-    name: Serverless SQL Pool
-    type: usage-based
-    description: Pay per TB of data processed by ad-hoc queries on data lake. No provisioning;
-      fully managed.
-    entries:
-      - label: Per TB processed
-        name: serverless_tb
-        type: metered
-        metric: TB
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '$5.00 per TB processed'
-        userMultiplied: false
-    elements:
-      - name: Query data lake without ETL
-      - name: T-SQL syntax over Parquet/CSV/JSON
-      - name: No infrastructure to manage
-  - id: microsoft-azure-synapse-spark
-    name: Apache Spark Pool
-    type: usage-based
-    description: Apache Spark compute billed per vCore-hour. Memory-optimized node sizes from
-      Small (4 vCore) to XXLarge (64 vCore). Auto-pause idle pools to control cost.
-    entries:
-      - label: Memory-optimized vCore-hour
-        name: spark_memory_vcore_hour
-        type: metered
-        metric: vcore-hour
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '$0.143 per vCore per hour'
-        userMultiplied: false
-    elements:
-      - name: Auto-pause to stop billing
-      - name: Auto-scale executors
-      - name: Optimized for memory-intensive workloads
-  - id: microsoft-azure-synapse-pipelines
-    name: Data Integration / Pipelines
-    type: usage-based
-    description: Mirrors Azure Data Factory pricing. Billed per orchestration activity-run, per
-      data integration unit (DIU)-hour for data movement, and per Spark execution hour.
-    entries:
-      - label: Orchestration activity run (Azure IR)
-        name: pipeline_activity_run
-        type: metered
-        metric: 1000-runs
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1000
-        price: '$1.00 per 1,000 runs'
-        userMultiplied: false
-      - label: Data movement (per DIU-hour)
-        name: pipeline_diu_hour
-        type: metered
-        metric: diu-hour
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '$0.25 per DIU-hour'
-        userMultiplied: false
-      - label: Pipeline activity execution (per hour)
-        name: pipeline_execution_hour
-        type: metered
-        metric: hour
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '$0.005 per hour'
-        userMultiplied: false
-    elements:
-      - name: Visual pipeline designer
-      - name: 90+ source/sink connectors
-      - name: Mapping and wrangling data flows
-  - id: microsoft-azure-synapse-reserved
-    name: Reserved Capacity (1y / 3y)
-    type: enterprise
-    description: Pre-commit to dedicated SQL pool DWU capacity for 1-year or 3-year terms;
-      ~37% / ~65% off pay-as-you-go.
-    entries:
-      - label: Reserved DWU (negotiated)
-        name: reserved_dwu
-        type: subscription
-        metric: contract
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: custom (1y ~37% off, 3y ~65% off)
-        userMultiplied: false
-    elements:
-      - name: Discount up to 65%
-      - name: Auto-renew option
-      - name: Enterprise Agreement bundling
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-    url: https://azure.microsoft.com/services/synapse-analytics/
+- name: Pre-Purchase Plan Tier 1 (5,000 SCUs, 6% discount)
+  price_text: $4700
+  price: 4700
+  currency: USD
+  period: one-time
+  unit: 5,000 Synapse Commit Units (SCUs) over 12 months
+  included_quota: 5,000 SCUs
+- name: Pre-Purchase Plan Tier 2 (10,000 SCUs, 8% discount)
+  price_text: $9200
+  price: 9200
+  currency: USD
+  period: one-time
+  unit: 10,000 SCUs over 12 months
+  included_quota: 10,000 SCUs
+- name: Pre-Purchase Plan Tier 3 (24,000 SCUs, 11% discount)
+  price_text: $21360
+  price: 21360
+  currency: USD
+  period: one-time
+  unit: 24,000 SCUs over 12 months
+  included_quota: 24,000 SCUs
+- name: Pre-Purchase Plan Tier 4 (60,000 SCUs, 16% discount)
+  price_text: $50400
+  price: 50400
+  currency: USD
+  period: one-time
+  unit: 60,000 SCUs over 12 months
+  included_quota: 60,000 SCUs
+- name: Pre-Purchase Plan Tier 5 (150,000 SCUs, 22% discount)
+  price_text: $117000
+  price: 117000
+  currency: USD
+  period: one-time
+  unit: 150,000 SCUs over 12 months
+  included_quota: 150,000 SCUs
+- name: Pre-Purchase Plan Tier 6 (360,000 SCUs, 28% discount)
+  price_text: $259200
+  price: 259200
+  currency: USD
+  period: one-time
+  unit: 360,000 SCUs over 12 months
+  included_quota: 360,000 SCUs
+rate_limit_statements:
+- Up to 50 concurrent pipeline activities
+- Up to 800 concurrent external pipeline activities
+- The minimum cluster size to run a Data Flow is 8 vCores
+- Queries will incur a minimum charge of 10 MB and each query will be rounded up to the nearest 1 MB of
+  data processed
+- requires a minimum of two compute instances
