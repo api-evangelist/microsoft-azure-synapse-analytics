@@ -14,7 +14,8 @@ capability_model:
 edge_count: 6
 edges:
 - tag: RoleAssignments
-  spec_file: microsoft-azure-synapse-analytics-roleassignments-api-openapi.yml
+  spec_file: microsoft-azure-synapse-analytics-role-assignments-api-openapi.yml
+  reanchored_from: microsoft-azure-synapse-analytics-roleassignments-api-openapi.yml
   capability_id: BC-620.20
   capability_id_l1: BC-620
   capability_name: Identity & Access Management
