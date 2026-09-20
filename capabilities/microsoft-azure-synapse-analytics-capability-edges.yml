@@ -1,0 +1,74 @@
+slug: microsoft-azure-synapse-analytics
+provider: Azure Synapse Analytics
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 6
+edges:
+- tag: RoleAssignments
+  spec_file: microsoft-azure-synapse-analytics-roleassignments-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: '"Create role assignment"; description: "Manage role assignments, role definitions, and access
+    control ... fine-grained permissions"'
+  reason: Operations grant and revoke role-based access, which is squarely identity and access management.
+- tag: WorkspaceAadAdmins
+  spec_file: microsoft-azure-synapse-analytics-workspaceaadadmins-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: '''Create or update workspace Active Directory admin'', ''Delete workspace Active Directory
+    admin'', schema WorkspaceAadAdminInfo'
+  reason: Operations administer the Azure Active Directory administrator principal for a workspace — directory-based
+    privileged access assignment, which is Identity & Access Management. Some residual ambiguity as it
+    is also platform resource configuration.
+- tag: BigDataPools
+  spec_file: microsoft-azure-synapse-analytics-bigdatapools-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: PUT .../bigDataPools/{bigDataPoolName} 'Create or update a Spark pool'; schemas AutoScaleProperties,
+    DynamicExecutorAllocation, AutoPauseProperties
+  reason: Provisioning and scaling Spark compute pools is cloud compute infrastructure management.
+- tag: SqlPoolTransparentDataEncryption
+  spec_file: microsoft-azure-synapse-analytics-sqlpooltransparentdataencryption-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.7
+  evidence: '"Create or update SQL pool transparent data encryption", schema "TransparentDataEncryption"'
+  reason: Configuring encryption-at-rest on a data store is a security control; L1 cybersecurity management,
+    with no clear L2 between security architecture and governance.
+- tag: WorkspaceManagedIdentity
+  spec_file: microsoft-azure-synapse-analytics-workspacemanagedidentity-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: '''Get managed identity SQL control settings'' / ''Create or update managed identity SQL control
+    settings'', schema ManagedIdentitySqlControlSettingsModel'
+  reason: Configures whether the workspace managed identity has control access to SQL resources — a service-principal/non-human
+    identity access grant, i.e. IAM. Thin surface (two operations) so confidence is moderate.
+- tag: Workspaces
+  spec_file: microsoft-azure-synapse-analytics-workspaces-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: '''Create or update a workspace'', ''Delete a workspace'', ''List workspaces by resource group'',
+    schemas WorkspaceProperties, DataLakeStorageAccountDetails'
+  reason: CRUD provisioning of Azure Synapse workspace resources (with attached data lake storage accounts)
+    under subscriptions/resource groups — provisioning and lifecycle of cloud infrastructure resources.
+    Could alternatively be read as data platform management, hence 0.7.
