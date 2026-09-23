@@ -249,6 +249,25 @@ components:
           type: string
         error:
           type: object
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+    LinkConnectionListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/LinkConnectionResource'
+        nextLink:
+          type: string
     LinkConnectionResource:
       type: object
       properties:
@@ -301,25 +320,6 @@ components:
                   type: integer
                 computeType:
                   type: string
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    LinkConnectionListResponse:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/LinkConnectionResource'
-        nextLink:
-          type: string
   parameters:
     ApiVersionParameter:
       name: api-version

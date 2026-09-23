@@ -187,7 +187,65 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
+  parameters:
+    WorkspaceNameParameter:
+      name: workspaceName
+      in: path
+      required: true
+      description: The name of the workspace.
+      schema:
+        type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      description: The API version to use for this operation.
+      schema:
+        type: string
+        default: '2021-06-01'
+    SubscriptionIdParameter:
+      name: subscriptionId
+      in: path
+      required: true
+      description: The ID of the target subscription.
+      schema:
+        type: string
+    ResourceGroupNameParameter:
+      name: resourceGroupName
+      in: path
+      required: true
+      description: The name of the resource group.
+      schema:
+        type: string
   schemas:
+    WorkspaceInfoListResult:
+      type: object
+      description: List of workspaces.
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Workspace'
+          description: List of workspaces.
+        nextLink:
+          type: string
+          description: Link to the next page of results.
+    DataLakeStorageAccountDetails:
+      type: object
+      description: Details of the default data lake storage account.
+      properties:
+        accountUrl:
+          type: string
+          description: Account URL.
+        filesystem:
+          type: string
+          description: Filesystem name.
+        resourceId:
+          type: string
+          description: ARM resource ID of the storage account.
+        createManagedPrivateEndpoint:
+          type: boolean
+          description: Create managed private endpoint to the storage account.
     ManagedIdentity:
       type: object
       description: The workspace managed identity.
@@ -220,6 +278,34 @@ components:
             message:
               type: string
               description: Error message.
+    Workspace:
+      type: object
+      description: A workspace resource.
+      properties:
+        id:
+          type: string
+          description: Fully qualified resource ID.
+          readOnly: true
+        name:
+          type: string
+          description: The name of the resource.
+          readOnly: true
+        type:
+          type: string
+          description: The type of the resource.
+          readOnly: true
+        location:
+          type: string
+          description: The geo-location where the resource lives.
+        tags:
+          type: object
+          additionalProperties:
+            type: string
+          description: Resource tags.
+        identity:
+          $ref: '#/components/schemas/ManagedIdentity'
+        properties:
+          $ref: '#/components/schemas/WorkspaceProperties'
     WorkspacePatchInfo:
       type: object
       description: Workspace patch details.
@@ -264,34 +350,6 @@ components:
               enum:
               - Enabled
               - Disabled
-    DataLakeStorageAccountDetails:
-      type: object
-      description: Details of the default data lake storage account.
-      properties:
-        accountUrl:
-          type: string
-          description: Account URL.
-        filesystem:
-          type: string
-          description: Filesystem name.
-        resourceId:
-          type: string
-          description: ARM resource ID of the storage account.
-        createManagedPrivateEndpoint:
-          type: boolean
-          description: Create managed private endpoint to the storage account.
-    WorkspaceInfoListResult:
-      type: object
-      description: List of workspaces.
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/Workspace'
-          description: List of workspaces.
-        nextLink:
-          type: string
-          description: Link to the next page of results.
     WorkspaceProperties:
       type: object
       description: Workspace properties.
@@ -365,64 +423,6 @@ components:
           type: string
           description: The workspace unique identifier.
           readOnly: true
-    Workspace:
-      type: object
-      description: A workspace resource.
-      properties:
-        id:
-          type: string
-          description: Fully qualified resource ID.
-          readOnly: true
-        name:
-          type: string
-          description: The name of the resource.
-          readOnly: true
-        type:
-          type: string
-          description: The type of the resource.
-          readOnly: true
-        location:
-          type: string
-          description: The geo-location where the resource lives.
-        tags:
-          type: object
-          additionalProperties:
-            type: string
-          description: Resource tags.
-        identity:
-          $ref: '#/components/schemas/ManagedIdentity'
-        properties:
-          $ref: '#/components/schemas/WorkspaceProperties'
-  parameters:
-    SubscriptionIdParameter:
-      name: subscriptionId
-      in: path
-      required: true
-      description: The ID of the target subscription.
-      schema:
-        type: string
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      description: The API version to use for this operation.
-      schema:
-        type: string
-        default: '2021-06-01'
-    WorkspaceNameParameter:
-      name: workspaceName
-      in: path
-      required: true
-      description: The name of the workspace.
-      schema:
-        type: string
-    ResourceGroupNameParameter:
-      name: resourceGroupName
-      in: path
-      required: true
-      description: The name of the resource group.
-      schema:
-        type: string
   securitySchemes:
     azure_auth:
       type: oauth2

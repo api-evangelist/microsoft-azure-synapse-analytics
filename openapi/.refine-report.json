@@ -69,7 +69,9 @@
     "microsoft-azure-synapse-analytics-workspacemanagedidentity-api-openapi.yml",
     "microsoft-azure-synapse-analytics-workspaces-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 4 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -103,7 +105,9 @@
     "azure-synapse-analytics-sql-script-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "azure-synapse-analytics-synapse-link-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "azure-synapse-analytics-trigger-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "azure-synapse-analytics-workspace-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0"
+    "azure-synapse-analytics-workspace-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: microsoft-azure-synapse-analytics-git-integration-api-openapi.yml, microsoft-azure-synapse-analytics-private-endpoint-connections-api-openapi.yml, microsoft-azure-synapse-analytics-role-assignments-api-openapi.yml, microsoft-azure-synapse-analytics-sql-pools-api-openapi.yml",
+    "apis.yml register: written (+4 apis, 35 total)"
   ],
   "skipped": [
     "microsoft-azure-synapse-analytics-azureadonlyauthentications-api-openapi.yml: previously refined output, superseded by openapi/_original/",
@@ -112,7 +116,7 @@
     "microsoft-azure-synapse-analytics-dataflow-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-dataflowdebugsession-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-dataset-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "microsoft-azure-synapse-analytics-gitintegration-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "microsoft-azure-synapse-analytics-git-integration-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-integrationruntimes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-ipfirewallrules-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-keys-api-openapi.yml: previously refined output, superseded by openapi/_original/",
@@ -125,15 +129,15 @@
     "microsoft-azure-synapse-analytics-monitoring-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-notebook-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-pipeline-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "microsoft-azure-synapse-analytics-privateendpointconnections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "microsoft-azure-synapse-analytics-private-endpoint-connections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-privatelinkhubs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "microsoft-azure-synapse-analytics-roleassignments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "microsoft-azure-synapse-analytics-role-assignments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-sparkbatch-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-sparkconfiguration-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-sparkjobdefinition-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-sparksession-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "microsoft-azure-synapse-analytics-sql-pools-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-sqlpoolrestorepoints-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "microsoft-azure-synapse-analytics-sqlpools-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-sqlpooltransparentdataencryption-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-sqlscript-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "microsoft-azure-synapse-analytics-synapselink-api-openapi.yml: previously refined output, superseded by openapi/_original/",

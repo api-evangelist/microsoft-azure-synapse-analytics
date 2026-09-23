@@ -233,49 +233,17 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    ErrorResponse:
+    SparkSessionCollection:
       type: object
       properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    SparkStatement:
-      type: object
-      properties:
-        id:
+        from:
           type: integer
-        code:
-          type: string
-        state:
-          type: string
-        output:
-          type: object
-          properties:
-            status:
-              type: string
-            executionCount:
-              type: integer
-            data:
-              type: object
-    SparkStatementCancellationResult:
-      type: object
-      properties:
-        msg:
-          type: string
-          description: The cancellation message.
-    SparkStatementCollection:
-      type: object
-      properties:
         total:
           type: integer
-        statements:
+        sessions:
           type: array
           items:
-            $ref: '#/components/schemas/SparkStatement'
+            $ref: '#/components/schemas/SparkSession'
     SparkSession:
       type: object
       properties:
@@ -327,17 +295,31 @@ components:
           type: object
           additionalProperties:
             type: string
-    SparkSessionCollection:
+    SparkStatementCancellationResult:
       type: object
       properties:
-        from:
-          type: integer
+        msg:
+          type: string
+          description: The cancellation message.
+    SparkStatementCollection:
+      type: object
+      properties:
         total:
           type: integer
-        sessions:
+        statements:
           type: array
           items:
-            $ref: '#/components/schemas/SparkSession'
+            $ref: '#/components/schemas/SparkStatement'
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
     SparkStatementOptions:
       type: object
       properties:
@@ -352,6 +334,24 @@ components:
           - pyspark
           - dotnetspark
           - sql
+    SparkStatement:
+      type: object
+      properties:
+        id:
+          type: integer
+        code:
+          type: string
+        state:
+          type: string
+        output:
+          type: object
+          properties:
+            status:
+              type: string
+            executionCount:
+              type: integer
+            data:
+              type: object
   parameters:
     SparkPoolNameParameter:
       name: sparkPoolName

@@ -147,21 +147,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    ArtifactRenameRequest:
-      type: object
-      properties:
-        newName:
-          type: string
     KqlScriptResource:
       type: object
       properties:
@@ -208,6 +193,21 @@ components:
           properties:
             name:
               type: string
+    ArtifactRenameRequest:
+      type: object
+      properties:
+        newName:
+          type: string
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
     KqlScriptsResourceCollectionResponse:
       type: object
       properties:
@@ -218,13 +218,6 @@ components:
         nextLink:
           type: string
   parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: 2021-11-01-preview
     KqlScriptNameParameter:
       name: kqlScriptName
       in: path
@@ -232,6 +225,13 @@ components:
       description: KQL script name.
       schema:
         type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: 2021-11-01-preview
   securitySchemes:
     azure_auth:
       type: oauth2

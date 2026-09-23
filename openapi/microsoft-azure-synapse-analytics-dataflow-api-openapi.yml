@@ -157,6 +157,23 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
+    DataFlowResource:
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+          readOnly: true
+        type:
+          type: string
+          readOnly: true
+        etag:
+          type: string
+          readOnly: true
+        properties:
+          $ref: '#/components/schemas/DataFlow'
     DataFlow:
       type: object
       required:
@@ -222,6 +239,15 @@ components:
             script:
               type: string
               description: DataFlow script.
+    DataFlowListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/DataFlowResource'
+        nextLink:
+          type: string
     ErrorResponse:
       type: object
       properties:
@@ -237,40 +263,7 @@ components:
       properties:
         newName:
           type: string
-    DataFlowListResponse:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/DataFlowResource'
-        nextLink:
-          type: string
-    DataFlowResource:
-      type: object
-      properties:
-        id:
-          type: string
-          readOnly: true
-        name:
-          type: string
-          readOnly: true
-        type:
-          type: string
-          readOnly: true
-        etag:
-          type: string
-          readOnly: true
-        properties:
-          $ref: '#/components/schemas/DataFlow'
   parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2020-12-01'
     DataFlowNameParameter:
       name: dataFlowName
       in: path
@@ -278,6 +271,13 @@ components:
       description: The data flow name.
       schema:
         type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2020-12-01'
   securitySchemes:
     azure_auth:
       type: oauth2

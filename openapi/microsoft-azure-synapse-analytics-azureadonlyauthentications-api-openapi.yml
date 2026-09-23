@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Azure Synapse Analytics - Azure AD Only Authentication Azure AD Only Authentications API
+  title: Azure Synapse Analytics - Azure AD Only Authentication…
   description: Manage Azure Active Directory only authentication settings for Synapse workspaces. Enables enforcing Azure AD authentication and disabling SQL authentication for enhanced security.
   version: '2021-06-01'
   contact:
@@ -122,17 +122,33 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
+  parameters:
+    WorkspaceNameParameter:
+      name: workspaceName
+      in: path
+      required: true
+      schema:
+        type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2021-06-01'
+    SubscriptionIdParameter:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+    ResourceGroupNameParameter:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     AzureADOnlyAuthenticationListResult:
       type: object
       properties:
@@ -171,32 +187,16 @@ components:
               type: string
               format: date-time
               readOnly: true
-  parameters:
-    SubscriptionIdParameter:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2021-06-01'
-    WorkspaceNameParameter:
-      name: workspaceName
-      in: path
-      required: true
-      schema:
-        type: string
-    ResourceGroupNameParameter:
-      name: resourceGroupName
-      in: path
-      required: true
-      schema:
-        type: string
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
   securitySchemes:
     azure_auth:
       type: oauth2

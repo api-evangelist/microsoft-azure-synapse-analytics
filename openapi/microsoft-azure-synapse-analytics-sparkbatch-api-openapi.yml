@@ -146,27 +146,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    SparkBatchJobCollection:
-      type: object
-      properties:
-        from:
-          type: integer
-        total:
-          type: integer
-        sessions:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkBatchJob'
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     SparkBatchJob:
       type: object
       properties:
@@ -214,6 +193,16 @@ components:
           type: array
           items:
             type: string
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
     SparkBatchJobOptions:
       type: object
       required:
@@ -263,6 +252,17 @@ components:
           type: integer
         executorCount:
           type: integer
+    SparkBatchJobCollection:
+      type: object
+      properties:
+        from:
+          type: integer
+        total:
+          type: integer
+        sessions:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkBatchJob'
   parameters:
     SparkPoolNameParameter:
       name: sparkPoolName

@@ -19,7 +19,7 @@ security:
 - azure_auth:
   - user_impersonation
 tags:
-- name: GitIntegration
+- name: Git Integration
 paths:
   /getGitHubAccessToken:
     post:
@@ -27,7 +27,7 @@ paths:
       summary: Azure Synapse Analytics Get GitHub access token
       description: Get the GitHub access token for the workspace Git integration.
       tags:
-      - GitIntegration
+      - Git Integration
       parameters:
       - $ref: '#/components/parameters/ApiVersionParameter'
       requestBody:
@@ -51,16 +51,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     GitHubAccessTokenRequest:
       type: object
       required:
@@ -77,6 +67,16 @@ components:
         gitHubAccessTokenBaseUrl:
           type: string
           description: The GitHub access token base URL.
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
     GitHubAccessTokenResponse:
       type: object
       properties:

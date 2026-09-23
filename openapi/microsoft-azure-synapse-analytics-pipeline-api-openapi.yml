@@ -205,16 +205,21 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    ErrorResponse:
+    ParameterSpecification:
       type: object
       properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
+        type:
+          type: string
+          enum:
+          - Object
+          - String
+          - Int
+          - Float
+          - Bool
+          - Array
+          - SecureString
+        defaultValue:
+          description: Default value of the parameter.
     Activity:
       type: object
       description: A pipeline activity.
@@ -247,63 +252,16 @@ components:
                   - Failed
                   - Skipped
                   - Completed
-    ParameterSpecification:
+    PipelineListResponse:
       type: object
+      description: A list of pipeline resources.
       properties:
-        type:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/PipelineResource'
+        nextLink:
           type: string
-          enum:
-          - Object
-          - String
-          - Int
-          - Float
-          - Bool
-          - Array
-          - SecureString
-        defaultValue:
-          description: Default value of the parameter.
-    ArtifactRenameRequest:
-      type: object
-      properties:
-        newName:
-          type: string
-          description: New name of the artifact.
-    PipelineResource:
-      type: object
-      description: Pipeline resource.
-      properties:
-        id:
-          type: string
-          readOnly: true
-        name:
-          type: string
-          readOnly: true
-        type:
-          type: string
-          readOnly: true
-        etag:
-          type: string
-          readOnly: true
-        properties:
-          $ref: '#/components/schemas/Pipeline'
-    VariableSpecification:
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-          - String
-          - Bool
-          - Array
-        defaultValue:
-          description: Default value of the variable.
-    CreateRunResponse:
-      type: object
-      description: Response body with a run identifier.
-      properties:
-        runId:
-          type: string
-          description: Identifier of the created run.
     Pipeline:
       type: object
       description: A pipeline definition.
@@ -340,24 +298,59 @@ components:
             name:
               type: string
               description: The name of the folder that this pipeline is in.
-    PipelineListResponse:
+    ArtifactRenameRequest:
       type: object
-      description: A list of pipeline resources.
       properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/PipelineResource'
-        nextLink:
+        newName:
           type: string
+          description: New name of the artifact.
+    PipelineResource:
+      type: object
+      description: Pipeline resource.
+      properties:
+        id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+          readOnly: true
+        type:
+          type: string
+          readOnly: true
+        etag:
+          type: string
+          readOnly: true
+        properties:
+          $ref: '#/components/schemas/Pipeline'
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+    CreateRunResponse:
+      type: object
+      description: Response body with a run identifier.
+      properties:
+        runId:
+          type: string
+          description: Identifier of the created run.
+    VariableSpecification:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - String
+          - Bool
+          - Array
+        defaultValue:
+          description: Default value of the variable.
   parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2020-12-01'
     PipelineNameParameter:
       name: pipelineName
       in: path
@@ -365,6 +358,13 @@ components:
       description: The pipeline name.
       schema:
         type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2020-12-01'
   securitySchemes:
     azure_auth:
       type: oauth2

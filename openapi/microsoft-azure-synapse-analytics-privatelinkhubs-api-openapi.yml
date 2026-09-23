@@ -199,6 +199,13 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
+    PrivateLinkHubPatchInfo:
+      type: object
+      properties:
+        tags:
+          type: object
+          additionalProperties:
+            type: string
     PrivateLinkHubInfoListResult:
       type: object
       properties:
@@ -250,20 +257,7 @@ components:
                 properties:
                   id:
                     type: string
-    PrivateLinkHubPatchInfo:
-      type: object
-      properties:
-        tags:
-          type: object
-          additionalProperties:
-            type: string
   parameters:
-    SubscriptionIdParameter:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
     ApiVersionParameter:
       name: api-version
       in: query
@@ -271,6 +265,12 @@ components:
       schema:
         type: string
         default: '2021-06-01'
+    SubscriptionIdParameter:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
     ResourceGroupNameParameter:
       name: resourceGroupName
       in: path

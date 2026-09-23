@@ -157,10 +157,12 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    AddDataFlowToDebugSessionResponse:
+    CreateDataFlowDebugSessionResponse:
       type: object
       properties:
-        jobVersion:
+        status:
+          type: string
+        sessionId:
           type: string
     DeleteDataFlowDebugSessionRequest:
       type: object
@@ -183,6 +185,42 @@ components:
               type: string
             properties:
               type: object
+    DataFlowDebugCommandResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: string
+    AddDataFlowToDebugSessionResponse:
+      type: object
+      properties:
+        jobVersion:
+          type: string
+    DataFlowDebugCommandRequest:
+      type: object
+      properties:
+        sessionId:
+          type: string
+        command:
+          type: string
+          enum:
+          - executePreviewQuery
+          - executeStatisticsQuery
+          - executeExpressionQuery
+        commandPayload:
+          type: object
+          properties:
+            streamName:
+              type: string
+            rowLimits:
+              type: integer
+            columns:
+              type: array
+              items:
+                type: string
+            expression:
+              type: string
     ErrorResponse:
       type: object
       properties:
@@ -193,30 +231,6 @@ components:
               type: string
             message:
               type: string
-    DataFlowDebugPackage:
-      type: object
-      properties:
-        sessionId:
-          type: string
-        dataFlow:
-          type: object
-          properties:
-            name:
-              type: string
-            properties:
-              type: object
-        datasets:
-          type: array
-          items:
-            type: object
-        linkedServices:
-          type: array
-          items:
-            type: object
-        staging:
-          type: object
-        debugSettings:
-          type: object
     QueryDataFlowDebugSessionsResponse:
       type: object
       properties:
@@ -245,44 +259,30 @@ components:
                 type: string
         nextLink:
           type: string
-    DataFlowDebugCommandRequest:
+    DataFlowDebugPackage:
       type: object
       properties:
         sessionId:
           type: string
-        command:
-          type: string
-          enum:
-          - executePreviewQuery
-          - executeStatisticsQuery
-          - executeExpressionQuery
-        commandPayload:
+        dataFlow:
           type: object
           properties:
-            streamName:
+            name:
               type: string
-            rowLimits:
-              type: integer
-            columns:
-              type: array
-              items:
-                type: string
-            expression:
-              type: string
-    DataFlowDebugCommandResponse:
-      type: object
-      properties:
-        status:
-          type: string
-        data:
-          type: string
-    CreateDataFlowDebugSessionResponse:
-      type: object
-      properties:
-        status:
-          type: string
-        sessionId:
-          type: string
+            properties:
+              type: object
+        datasets:
+          type: array
+          items:
+            type: object
+        linkedServices:
+          type: array
+          items:
+            type: object
+        staging:
+          type: object
+        debugSettings:
+          type: object
   parameters:
     ApiVersionParameter:
       name: api-version

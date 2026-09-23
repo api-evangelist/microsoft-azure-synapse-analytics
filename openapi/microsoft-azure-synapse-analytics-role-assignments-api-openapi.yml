@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Azure Synapse Analytics - Access Control Role Assignments API
+  title: Azure Synapse Analytics - Access Control Role Assignments…
   description: Manage role assignments, role definitions, and access control for Synapse workspace resources. Supports Synapse role-based access control for fine-grained permissions.
   version: '2020-12-01'
   contact:
@@ -20,7 +20,7 @@ security:
 - azure_auth:
   - user_impersonation
 tags:
-- name: RoleAssignments
+- name: Role Assignments
 paths:
   /roleAssignments:
     get:
@@ -28,7 +28,7 @@ paths:
       summary: Azure Synapse Analytics List role assignments
       description: List role assignments.
       tags:
-      - RoleAssignments
+      - Role Assignments
       parameters:
       - $ref: '#/components/parameters/ApiVersionParameter'
       - name: roleId
@@ -70,7 +70,7 @@ paths:
       summary: Azure Synapse Analytics Get role assignment
       description: Get role assignment by role assignment Id.
       tags:
-      - RoleAssignments
+      - Role Assignments
       parameters:
       - $ref: '#/components/parameters/ApiVersionParameter'
       - name: roleAssignmentId
@@ -97,7 +97,7 @@ paths:
       summary: Azure Synapse Analytics Create role assignment
       description: Create role assignment.
       tags:
-      - RoleAssignments
+      - Role Assignments
       parameters:
       - $ref: '#/components/parameters/ApiVersionParameter'
       - name: roleAssignmentId
@@ -130,7 +130,7 @@ paths:
       summary: Azure Synapse Analytics Delete role assignment
       description: Delete role assignment by role assignment Id.
       tags:
-      - RoleAssignments
+      - Role Assignments
       parameters:
       - $ref: '#/components/parameters/ApiVersionParameter'
       - name: roleAssignmentId
@@ -156,16 +156,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     RoleAssignmentRequest:
       type: object
       required:
@@ -201,6 +191,16 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/RoleAssignmentDetails'
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
     RoleAssignmentDetails:
       type: object
       properties:

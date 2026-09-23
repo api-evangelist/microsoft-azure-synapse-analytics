@@ -204,13 +204,6 @@ components:
               type: string
               readOnly: true
   parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2020-12-01'
     LibraryNameParameter:
       name: libraryName
       in: path
@@ -218,6 +211,13 @@ components:
       description: Library name (e.g., library.jar or library.whl).
       schema:
         type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2020-12-01'
   securitySchemes:
     azure_auth:
       type: oauth2

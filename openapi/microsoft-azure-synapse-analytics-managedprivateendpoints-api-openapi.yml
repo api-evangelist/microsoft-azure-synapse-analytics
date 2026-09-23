@@ -119,6 +119,28 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
+  parameters:
+    ManagedVirtualNetworkNameParameter:
+      name: managedVirtualNetworkName
+      in: path
+      required: true
+      description: Managed virtual network name.
+      schema:
+        type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: 2021-06-01-preview
+    ManagedPrivateEndpointNameParameter:
+      name: managedPrivateEndpointName
+      in: path
+      required: true
+      description: Managed private endpoint name.
+      schema:
+        type: string
   schemas:
     ErrorResponse:
       type: object
@@ -130,6 +152,15 @@ components:
               type: string
             message:
               type: string
+    ManagedPrivateEndpointListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/ManagedPrivateEndpoint'
+        nextLink:
+          type: string
     ManagedPrivateEndpoint:
       type: object
       properties:
@@ -170,37 +201,6 @@ components:
             isReserved:
               type: boolean
               readOnly: true
-    ManagedPrivateEndpointListResponse:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/ManagedPrivateEndpoint'
-        nextLink:
-          type: string
-  parameters:
-    ManagedVirtualNetworkNameParameter:
-      name: managedVirtualNetworkName
-      in: path
-      required: true
-      description: Managed virtual network name.
-      schema:
-        type: string
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: 2021-06-01-preview
-    ManagedPrivateEndpointNameParameter:
-      name: managedPrivateEndpointName
-      in: path
-      required: true
-      description: Managed private endpoint name.
-      schema:
-        type: string
   securitySchemes:
     azure_auth:
       type: oauth2

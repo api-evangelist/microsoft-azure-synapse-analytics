@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Azure Synapse Analytics - Firewall Rules Ip Firewall Rules API
+  title: Azure Synapse Analytics - Firewall Rules Ip Firewall Rules…
   description: Manage IP firewall rules for Synapse workspaces to control network access. Supports creating, updating, and deleting server-level IP firewall rules for workspace security.
   version: '2021-06-01'
   contact:
@@ -184,33 +184,46 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
+  parameters:
+    WorkspaceNameParameter:
+      name: workspaceName
+      in: path
+      required: true
+      schema:
+        type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2021-06-01'
+    SubscriptionIdParameter:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+    ResourceGroupNameParameter:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    ReplaceAllIpFirewallRulesRequest:
-      type: object
-      properties:
-        ipFirewallRules:
-          type: object
-          additionalProperties:
-            type: object
-            properties:
-              startIpAddress:
-                type: string
-              endIpAddress:
-                type: string
     ReplaceAllFirewallRulesOperationResponse:
       type: object
       properties:
         operationId:
+          type: string
+    IpFirewallRuleInfoListResult:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/IpFirewallRuleInfo'
+        nextLink:
           type: string
     IpFirewallRuleInfo:
       type: object
@@ -242,41 +255,28 @@ components:
             startIpAddress:
               type: string
               description: The start IP address of the firewall rule (IPv4 format).
-    IpFirewallRuleInfoListResult:
+    ErrorResponse:
       type: object
       properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/IpFirewallRuleInfo'
-        nextLink:
-          type: string
-  parameters:
-    SubscriptionIdParameter:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2021-06-01'
-    WorkspaceNameParameter:
-      name: workspaceName
-      in: path
-      required: true
-      schema:
-        type: string
-    ResourceGroupNameParameter:
-      name: resourceGroupName
-      in: path
-      required: true
-      schema:
-        type: string
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+    ReplaceAllIpFirewallRulesRequest:
+      type: object
+      properties:
+        ipFirewallRules:
+          type: object
+          additionalProperties:
+            type: object
+            properties:
+              startIpAddress:
+                type: string
+              endIpAddress:
+                type: string
   securitySchemes:
     azure_auth:
       type: oauth2
