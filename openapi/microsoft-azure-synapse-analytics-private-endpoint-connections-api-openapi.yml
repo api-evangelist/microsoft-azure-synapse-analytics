@@ -146,12 +146,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   parameters:
-    WorkspaceNameParameter:
-      name: workspaceName
-      in: path
-      required: true
-      schema:
-        type: string
     ApiVersionParameter:
       name: api-version
       in: query
@@ -159,38 +153,25 @@ components:
       schema:
         type: string
         default: '2021-06-01'
-    SubscriptionIdParameter:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
     ResourceGroupNameParameter:
       name: resourceGroupName
       in: path
       required: true
       schema:
         type: string
+    WorkspaceNameParameter:
+      name: workspaceName
+      in: path
+      required: true
+      schema:
+        type: string
+    SubscriptionIdParameter:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
   schemas:
-    PrivateEndpointConnectionList:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/PrivateEndpointConnection'
-        nextLink:
-          type: string
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     PrivateEndpointConnection:
       type: object
       properties:
@@ -231,6 +212,25 @@ components:
             provisioningState:
               type: string
               readOnly: true
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+    PrivateEndpointConnectionList:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrivateEndpointConnection'
+        nextLink:
+          type: string
   securitySchemes:
     azure_auth:
       type: oauth2

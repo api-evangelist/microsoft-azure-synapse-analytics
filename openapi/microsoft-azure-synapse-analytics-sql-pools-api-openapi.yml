@@ -213,61 +213,37 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
-  parameters:
-    WorkspaceNameParameter:
-      name: workspaceName
-      in: path
-      required: true
-      schema:
-        type: string
-    SqlPoolNameParameter:
-      name: sqlPoolName
-      in: path
-      required: true
-      description: SQL pool name.
-      schema:
-        type: string
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2021-06-01'
-    SubscriptionIdParameter:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
-    ResourceGroupNameParameter:
-      name: resourceGroupName
-      in: path
-      required: true
-      schema:
-        type: string
   schemas:
-    SqlPoolPatchInfo:
+    SqlPoolInfoListResult:
       type: object
-      description: SQL pool patch info.
+      description: List of SQL pools.
       properties:
-        tags:
-          type: object
-          additionalProperties:
-            type: string
-        location:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/SqlPool'
+        nextLink:
           type: string
-        sku:
-          $ref: '#/components/schemas/Sku'
-        properties:
+    Sku:
+      type: object
+      description: SQL pool SKU.
+      properties:
+        tier:
+          type: string
+        name:
+          type: string
+        capacity:
+          type: integer
+    ErrorResponse:
+      type: object
+      description: Error response.
+      properties:
+        error:
           type: object
           properties:
-            maxSizeBytes:
-              type: integer
-              format: int64
-            collation:
+            code:
               type: string
-            createMode:
+            message:
               type: string
     SqlPool:
       type: object
@@ -293,6 +269,28 @@ components:
           $ref: '#/components/schemas/Sku'
         properties:
           $ref: '#/components/schemas/SqlPoolProperties'
+    SqlPoolPatchInfo:
+      type: object
+      description: SQL pool patch info.
+      properties:
+        tags:
+          type: object
+          additionalProperties:
+            type: string
+        location:
+          type: string
+        sku:
+          $ref: '#/components/schemas/Sku'
+        properties:
+          type: object
+          properties:
+            maxSizeBytes:
+              type: integer
+              format: int64
+            collation:
+              type: string
+            createMode:
+              type: string
     SqlPoolProperties:
       type: object
       description: SQL pool properties.
@@ -340,37 +338,39 @@ components:
           enum:
           - GRS
           - LRS
-    ErrorResponse:
-      type: object
-      description: Error response.
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    SqlPoolInfoListResult:
-      type: object
-      description: List of SQL pools.
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/SqlPool'
-        nextLink:
-          type: string
-    Sku:
-      type: object
-      description: SQL pool SKU.
-      properties:
-        tier:
-          type: string
-        name:
-          type: string
-        capacity:
-          type: integer
+  parameters:
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2021-06-01'
+    ResourceGroupNameParameter:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
+    WorkspaceNameParameter:
+      name: workspaceName
+      in: path
+      required: true
+      schema:
+        type: string
+    SqlPoolNameParameter:
+      name: sqlPoolName
+      in: path
+      required: true
+      description: SQL pool name.
+      schema:
+        type: string
+    SubscriptionIdParameter:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     azure_auth:
       type: oauth2

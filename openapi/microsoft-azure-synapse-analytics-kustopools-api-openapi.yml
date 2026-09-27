@@ -178,6 +178,19 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   parameters:
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: 2021-06-01-preview
+    ResourceGroupNameParameter:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
     WorkspaceNameParameter:
       name: workspaceName
       in: path
@@ -191,60 +204,20 @@ components:
       description: The name of the Kusto pool.
       schema:
         type: string
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: 2021-06-01-preview
     SubscriptionIdParameter:
       name: subscriptionId
       in: path
       required: true
       schema:
         type: string
-    ResourceGroupNameParameter:
-      name: resourceGroupName
-      in: path
-      required: true
-      schema:
-        type: string
   schemas:
-    KustoPoolUpdate:
+    KustoPoolListResult:
       type: object
       properties:
-        tags:
-          type: object
-          additionalProperties:
-            type: string
-        sku:
-          type: object
-          properties:
-            name:
-              type: string
-            capacity:
-              type: integer
-            size:
-              type: string
-        properties:
-          type: object
-          properties:
-            optimizedAutoscale:
-              type: object
-              properties:
-                version:
-                  type: integer
-                isEnabled:
-                  type: boolean
-                minimum:
-                  type: integer
-                maximum:
-                  type: integer
-            enableStreamingIngest:
-              type: boolean
-            enablePurge:
-              type: boolean
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/KustoPool'
     ErrorResponse:
       type: object
       properties:
@@ -255,13 +228,6 @@ components:
               type: string
             message:
               type: string
-    KustoPoolListResult:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/KustoPool'
     KustoPool:
       type: object
       properties:
@@ -351,6 +317,40 @@ components:
             workspaceUID:
               type: string
               readOnly: true
+    KustoPoolUpdate:
+      type: object
+      properties:
+        tags:
+          type: object
+          additionalProperties:
+            type: string
+        sku:
+          type: object
+          properties:
+            name:
+              type: string
+            capacity:
+              type: integer
+            size:
+              type: string
+        properties:
+          type: object
+          properties:
+            optimizedAutoscale:
+              type: object
+              properties:
+                version:
+                  type: integer
+                isEnabled:
+                  type: boolean
+                minimum:
+                  type: integer
+                maximum:
+                  type: integer
+            enableStreamingIngest:
+              type: boolean
+            enablePurge:
+              type: boolean
   securitySchemes:
     azure_auth:
       type: oauth2

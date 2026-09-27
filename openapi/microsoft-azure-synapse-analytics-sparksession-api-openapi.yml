@@ -233,17 +233,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    SparkSessionCollection:
-      type: object
-      properties:
-        from:
-          type: integer
-        total:
-          type: integer
-        sessions:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkSession'
     SparkSession:
       type: object
       properties:
@@ -274,6 +263,12 @@ components:
           type: array
           items:
             type: string
+    SparkStatementCancellationResult:
+      type: object
+      properties:
+        msg:
+          type: string
+          description: The cancellation message.
     SparkSessionOptions:
       type: object
       required:
@@ -295,12 +290,6 @@ components:
           type: object
           additionalProperties:
             type: string
-    SparkStatementCancellationResult:
-      type: object
-      properties:
-        msg:
-          type: string
-          description: The cancellation message.
     SparkStatementCollection:
       type: object
       properties:
@@ -320,20 +309,6 @@ components:
               type: string
             message:
               type: string
-    SparkStatementOptions:
-      type: object
-      properties:
-        code:
-          type: string
-          description: The code to execute.
-        kind:
-          type: string
-          description: The language of the code.
-          enum:
-          - spark
-          - pyspark
-          - dotnetspark
-          - sql
     SparkStatement:
       type: object
       properties:
@@ -352,6 +327,31 @@ components:
               type: integer
             data:
               type: object
+    SparkStatementOptions:
+      type: object
+      properties:
+        code:
+          type: string
+          description: The code to execute.
+        kind:
+          type: string
+          description: The language of the code.
+          enum:
+          - spark
+          - pyspark
+          - dotnetspark
+          - sql
+    SparkSessionCollection:
+      type: object
+      properties:
+        from:
+          type: integer
+        total:
+          type: integer
+        sessions:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkSession'
   parameters:
     SparkPoolNameParameter:
       name: sparkPoolName

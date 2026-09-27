@@ -204,54 +204,22 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
+  parameters:
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2020-12-01'
+    PipelineNameParameter:
+      name: pipelineName
+      in: path
+      required: true
+      description: The pipeline name.
+      schema:
+        type: string
   schemas:
-    ParameterSpecification:
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-          - Object
-          - String
-          - Int
-          - Float
-          - Bool
-          - Array
-          - SecureString
-        defaultValue:
-          description: Default value of the parameter.
-    Activity:
-      type: object
-      description: A pipeline activity.
-      required:
-      - name
-      - type
-      properties:
-        name:
-          type: string
-          description: Activity name.
-        type:
-          type: string
-          description: Type of activity.
-        description:
-          type: string
-          description: Activity description.
-        dependsOn:
-          type: array
-          items:
-            type: object
-            properties:
-              activity:
-                type: string
-              dependencyConditions:
-                type: array
-                items:
-                  type: string
-                  enum:
-                  - Succeeded
-                  - Failed
-                  - Skipped
-                  - Completed
     PipelineListResponse:
       type: object
       description: A list of pipeline resources.
@@ -262,6 +230,12 @@ components:
             $ref: '#/components/schemas/PipelineResource'
         nextLink:
           type: string
+    ArtifactRenameRequest:
+      type: object
+      properties:
+        newName:
+          type: string
+          description: New name of the artifact.
     Pipeline:
       type: object
       description: A pipeline definition.
@@ -298,12 +272,32 @@ components:
             name:
               type: string
               description: The name of the folder that this pipeline is in.
-    ArtifactRenameRequest:
+    VariableSpecification:
       type: object
       properties:
-        newName:
+        type:
           type: string
-          description: New name of the artifact.
+          enum:
+          - String
+          - Bool
+          - Array
+        defaultValue:
+          description: Default value of the variable.
+    ParameterSpecification:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - Object
+          - String
+          - Int
+          - Float
+          - Bool
+          - Array
+          - SecureString
+        defaultValue:
+          description: Default value of the parameter.
     PipelineResource:
       type: object
       description: Pipeline resource.
@@ -339,32 +333,38 @@ components:
         runId:
           type: string
           description: Identifier of the created run.
-    VariableSpecification:
+    Activity:
       type: object
+      description: A pipeline activity.
+      required:
+      - name
+      - type
       properties:
+        name:
+          type: string
+          description: Activity name.
         type:
           type: string
-          enum:
-          - String
-          - Bool
-          - Array
-        defaultValue:
-          description: Default value of the variable.
-  parameters:
-    PipelineNameParameter:
-      name: pipelineName
-      in: path
-      required: true
-      description: The pipeline name.
-      schema:
-        type: string
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2020-12-01'
+          description: Type of activity.
+        description:
+          type: string
+          description: Activity description.
+        dependsOn:
+          type: array
+          items:
+            type: object
+            properties:
+              activity:
+                type: string
+              dependencyConditions:
+                type: array
+                items:
+                  type: string
+                  enum:
+                  - Succeeded
+                  - Failed
+                  - Skipped
+                  - Completed
   securitySchemes:
     azure_auth:
       type: oauth2

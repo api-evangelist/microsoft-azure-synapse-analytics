@@ -213,13 +213,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   parameters:
-    SparkJobDefinitionNameParameter:
-      name: sparkJobDefinitionName
-      in: path
-      required: true
-      description: The Spark job definition name.
-      schema:
-        type: string
     ApiVersionParameter:
       name: api-version
       in: query
@@ -227,7 +220,28 @@ components:
       schema:
         type: string
         default: '2020-12-01'
+    SparkJobDefinitionNameParameter:
+      name: sparkJobDefinitionName
+      in: path
+      required: true
+      description: The Spark job definition name.
+      schema:
+        type: string
   schemas:
+    ArtifactRenameRequest:
+      type: object
+      properties:
+        newName:
+          type: string
+    SparkJobDefinitionListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkJobDefinitionResource'
+        nextLink:
+          type: string
     SparkJobDefinitionResource:
       type: object
       properties:
@@ -245,15 +259,16 @@ components:
           readOnly: true
         properties:
           $ref: '#/components/schemas/SparkJobDefinition'
-    SparkJobDefinitionListResponse:
+    ErrorResponse:
       type: object
       properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkJobDefinitionResource'
-        nextLink:
-          type: string
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
     SparkBatchJob:
       type: object
       properties:
@@ -335,21 +350,6 @@ components:
           properties:
             name:
               type: string
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    ArtifactRenameRequest:
-      type: object
-      properties:
-        newName:
-          type: string
   securitySchemes:
     azure_auth:
       type: oauth2

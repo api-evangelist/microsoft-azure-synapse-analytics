@@ -41,9 +41,11 @@ created: '2024-01-01'
 modified: '2026-05-19'
 url: https://azure.microsoft.com/en-us/services/synapse-analytics/
 apis:
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-azureadonlyauthentications-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-azureadonlyauthentications-api
   name: Azure Synapse Analytics AzureADOnlyAuthentications API
-  description: The AzureADOnlyAuthentications API from Azure Synapse Analytics — 2 operation(s) for azureadonlyauthentications.
+  description: >-
+    The AzureADOnlyAuthentications API from Azure Synapse Analytics — 2 operation(s) for azureadonlyauthentications.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -54,7 +56,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -150,7 +153,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -246,7 +250,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -344,7 +349,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -427,9 +433,11 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-dataflowdebugsession-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-dataflowdebugsession-api
   name: Azure Synapse Analytics DataFlowDebugSession API
-  description: The DataFlowDebugSession API from Azure Synapse Analytics — 5 operation(s) for dataflowdebugsession.
+  description: >-
+    The DataFlowDebugSession API from Azure Synapse Analytics — 5 operation(s) for dataflowdebugsession.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -442,7 +450,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -540,7 +549,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -623,9 +633,11 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-integrationruntimes-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-integrationruntimes-api
   name: Azure Synapse Analytics IntegrationRuntimes API
-  description: The IntegrationRuntimes API from Azure Synapse Analytics — 2 operation(s) for integrationruntimes.
+  description: >-
+    The IntegrationRuntimes API from Azure Synapse Analytics — 2 operation(s) for integrationruntimes.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -636,7 +648,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -721,7 +734,8 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
 - aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-ipfirewallrules-api
   name: Azure Synapse Analytics IpFirewallRules API
-  description: The IpFirewallRules API from Azure Synapse Analytics — 3 operation(s) for ipfirewallrules.
+  description: >-
+    The IpFirewallRules API from Azure Synapse Analytics — 3 operation(s) for ipfirewallrules.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -732,7 +746,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -828,7 +843,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -924,7 +940,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1020,7 +1037,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1116,7 +1134,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1212,7 +1231,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1308,7 +1328,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1391,9 +1412,11 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-managedprivateendpoints-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-managedprivateendpoints-api
   name: Azure Synapse Analytics ManagedPrivateEndpoints API
-  description: The ManagedPrivateEndpoints API from Azure Synapse Analytics — 2 operation(s) for managedprivateendpoints.
+  description: >-
+    The ManagedPrivateEndpoints API from Azure Synapse Analytics — 2 operation(s) for managedprivateendpoints.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -1404,7 +1427,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1500,7 +1524,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1598,7 +1623,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1696,7 +1722,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1781,7 +1808,8 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
 - aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-privatelinkhubs-api
   name: Azure Synapse Analytics PrivateLinkHubs API
-  description: The PrivateLinkHubs API from Azure Synapse Analytics — 3 operation(s) for privatelinkhubs.
+  description: >-
+    The PrivateLinkHubs API from Azure Synapse Analytics — 3 operation(s) for privatelinkhubs.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -1792,7 +1820,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1888,7 +1917,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -1971,9 +2001,11 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sparkconfiguration-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sparkconfiguration-api
   name: Azure Synapse Analytics SparkConfiguration API
-  description: The SparkConfiguration API from Azure Synapse Analytics — 3 operation(s) for sparkconfiguration.
+  description: >-
+    The SparkConfiguration API from Azure Synapse Analytics — 3 operation(s) for sparkconfiguration.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -1984,7 +2016,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2067,9 +2100,11 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sparkjobdefinition-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sparkjobdefinition-api
   name: Azure Synapse Analytics SparkJobDefinition API
-  description: The SparkJobDefinition API from Azure Synapse Analytics — 5 operation(s) for sparkjobdefinition.
+  description: >-
+    The SparkJobDefinition API from Azure Synapse Analytics — 5 operation(s) for sparkjobdefinition.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -2080,7 +2115,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2176,7 +2212,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2259,9 +2296,11 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sqlpoolrestorepoints-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sqlpoolrestorepoints-api
   name: Azure Synapse Analytics SqlPoolRestorePoints API
-  description: The SqlPoolRestorePoints API from Azure Synapse Analytics — 1 operation(s) for sqlpoolrestorepoints.
+  description: >-
+    The SqlPoolRestorePoints API from Azure Synapse Analytics — 1 operation(s) for sqlpoolrestorepoints.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -2272,7 +2311,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2355,20 +2395,24 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sqlpooltransparentdataencryption-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-sqlpooltransparentdataencryption-api
   name: Azure Synapse Analytics SqlPoolTransparentDataEncryption API
-  description: The SqlPoolTransparentDataEncryption API from Azure Synapse Analytics — 1 operation(s) for sqlpooltransparentdataencryption.
+  description: >-
+    The SqlPoolTransparentDataEncryption API from Azure Synapse Analytics — 1 operation(s) for sqlpooltransparentdataencryption.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
   - SqlPoolTransparentDataEncryption
   properties:
   - type: OpenAPI
-    url: openapi/microsoft-azure-synapse-analytics-sqlpooltransparentdataencryption-api-openapi.yml
+    url: >-
+      openapi/microsoft-azure-synapse-analytics-sqlpooltransparentdataencryption-api-openapi.yml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2464,7 +2508,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2560,7 +2605,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2656,7 +2702,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2739,9 +2786,11 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-workspaceaadadmins-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-workspaceaadadmins-api
   name: Azure Synapse Analytics WorkspaceAadAdmins API
-  description: The WorkspaceAadAdmins API from Azure Synapse Analytics — 1 operation(s) for workspaceaadadmins.
+  description: >-
+    The WorkspaceAadAdmins API from Azure Synapse Analytics — 1 operation(s) for workspaceaadadmins.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -2752,7 +2801,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2835,9 +2885,11 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-workspacemanagedidentity-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-workspacemanagedidentity-api
   name: Azure Synapse Analytics WorkspaceManagedIdentity API
-  description: The WorkspaceManagedIdentity API from Azure Synapse Analytics — 1 operation(s) for workspacemanagedidentity.
+  description: >-
+    The WorkspaceManagedIdentity API from Azure Synapse Analytics — 1 operation(s) for workspacemanagedidentity.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -2848,7 +2900,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -2946,7 +2999,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -3031,7 +3085,8 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
 - aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-git-integration-api
   name: Azure Synapse Analytics Git Integration API
-  description: The Git Integration API from Azure Synapse Analytics — 1 operation(s) for git integration.
+  description: >-
+    The Git Integration API from Azure Synapse Analytics — 1 operation(s) for git integration.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -3042,7 +3097,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -3125,15 +3181,15 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
-- aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-private-endpoint-connections-api
+- aid: >-
+    microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-private-endpoint-connections-api
   name: Azure Synapse Analytics Private Endpoint Connections API
-  description: The Private Endpoint Connections API from Azure Synapse Analytics — 2 operation(s) for private endpoint
+  description: >-
+    The Private Endpoint Connections API from Azure Synapse Analytics — 2 operation(s) for private endpoint
     connections.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
-  - PrivateEndpointConnections
-  tags_raw:
   - Private Endpoint Connections
   properties:
   - type: OpenAPI
@@ -3141,7 +3197,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -3226,7 +3283,8 @@ apis:
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
 - aid: microsoft-azure-synapse-analytics:microsoft-azure-synapse-analytics-role-assignments-api
   name: Azure Synapse Analytics Role Assignments API
-  description: The Role Assignments API from Azure Synapse Analytics — 2 operation(s) for role assignments.
+  description: >-
+    The Role Assignments API from Azure Synapse Analytics — 2 operation(s) for role assignments.
   humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
   baseURL: https://management.azure.com
   tags:
@@ -3237,7 +3295,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD
@@ -3333,7 +3392,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/workspace
   - type: Swagger
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
+    url: >-
+      https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json
   - type: JSONSchema
     url: json-schema/azure-synapse-analytics-workspace-schema.json
   - type: JSONLD

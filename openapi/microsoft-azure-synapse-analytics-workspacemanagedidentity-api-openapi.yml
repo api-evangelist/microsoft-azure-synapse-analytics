@@ -81,13 +81,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   parameters:
-    WorkspaceNameParameter:
-      name: workspaceName
-      in: path
-      required: true
-      description: The name of the workspace.
-      schema:
-        type: string
     ApiVersionParameter:
       name: api-version
       in: query
@@ -96,13 +89,6 @@ components:
       schema:
         type: string
         default: '2021-06-01'
-    SubscriptionIdParameter:
-      name: subscriptionId
-      in: path
-      required: true
-      description: The ID of the target subscription.
-      schema:
-        type: string
     ResourceGroupNameParameter:
       name: resourceGroupName
       in: path
@@ -110,7 +96,34 @@ components:
       description: The name of the resource group.
       schema:
         type: string
+    WorkspaceNameParameter:
+      name: workspaceName
+      in: path
+      required: true
+      description: The name of the workspace.
+      schema:
+        type: string
+    SubscriptionIdParameter:
+      name: subscriptionId
+      in: path
+      required: true
+      description: The ID of the target subscription.
+      schema:
+        type: string
   schemas:
+    ErrorResponse:
+      type: object
+      description: Error response from the Azure Synapse service.
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              description: Error code.
+            message:
+              type: string
+              description: Error message.
     ManagedIdentitySqlControlSettingsModel:
       type: object
       description: SQL control settings for the workspace managed identity.
@@ -146,19 +159,6 @@ components:
                   - Disabling
                   - Disabled
                   - Unknown
-    ErrorResponse:
-      type: object
-      description: Error response from the Azure Synapse service.
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-              description: Error code.
-            message:
-              type: string
-              description: Error message.
   securitySchemes:
     azure_auth:
       type: oauth2

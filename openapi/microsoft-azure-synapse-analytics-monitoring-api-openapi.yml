@@ -83,27 +83,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    SparkJobListViewResponse:
-      type: object
-      description: List of Spark jobs response.
-      properties:
-        nJobs:
-          type: integer
-          description: Number of Spark jobs.
-        sparkJobs:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkJob'
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     SqlQueryStringDataModel:
       type: object
       description: SQL query string data model.
@@ -155,6 +134,27 @@ components:
                 type: string
               name:
                 type: string
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+    SparkJobListViewResponse:
+      type: object
+      description: List of Spark jobs response.
+      properties:
+        nJobs:
+          type: integer
+          description: Number of Spark jobs.
+        sparkJobs:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkJob'
   parameters:
     ApiVersionParameter:
       name: api-version

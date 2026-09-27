@@ -68,28 +68,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    IntegrationRuntimeListResponse:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/IntegrationRuntimeResource'
-        nextLink:
-          type: string
-    IntegrationRuntime:
-      type: object
-      required:
-      - type
-      properties:
-        type:
-          type: string
-          description: Type of integration runtime.
-          enum:
-          - Managed
-          - SelfHosted
-        description:
-          type: string
     IntegrationRuntimeResource:
       type: object
       properties:
@@ -107,6 +85,28 @@ components:
           readOnly: true
         properties:
           $ref: '#/components/schemas/IntegrationRuntime'
+    IntegrationRuntime:
+      type: object
+      required:
+      - type
+      properties:
+        type:
+          type: string
+          description: Type of integration runtime.
+          enum:
+          - Managed
+          - SelfHosted
+        description:
+          type: string
+    IntegrationRuntimeListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/IntegrationRuntimeResource'
+        nextLink:
+          type: string
     ErrorResponse:
       type: object
       properties:

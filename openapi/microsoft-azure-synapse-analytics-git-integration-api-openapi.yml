@@ -51,22 +51,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    GitHubAccessTokenRequest:
-      type: object
-      required:
-      - gitHubClientId
-      - gitHubAccessCode
-      - gitHubAccessTokenBaseUrl
-      properties:
-        gitHubClientId:
-          type: string
-          description: The GitHub Client Id.
-        gitHubAccessCode:
-          type: string
-          description: The GitHub Access code.
-        gitHubAccessTokenBaseUrl:
-          type: string
-          description: The GitHub access token base URL.
     ErrorResponse:
       type: object
       properties:
@@ -83,6 +67,22 @@ components:
         gitHubAccessToken:
           type: string
           description: The GitHub access token.
+    GitHubAccessTokenRequest:
+      type: object
+      required:
+      - gitHubClientId
+      - gitHubAccessCode
+      - gitHubAccessTokenBaseUrl
+      properties:
+        gitHubClientId:
+          type: string
+          description: The GitHub Client Id.
+        gitHubAccessCode:
+          type: string
+          description: The GitHub Access code.
+        gitHubAccessTokenBaseUrl:
+          type: string
+          description: The GitHub access token base URL.
   parameters:
     ApiVersionParameter:
       name: api-version

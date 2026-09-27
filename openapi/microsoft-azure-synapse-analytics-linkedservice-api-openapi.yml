@@ -157,13 +157,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   parameters:
-    LinkedServiceNameParameter:
-      name: linkedServiceName
-      in: path
-      required: true
-      description: The linked service name.
-      schema:
-        type: string
     ApiVersionParameter:
       name: api-version
       in: query
@@ -171,33 +164,14 @@ components:
       schema:
         type: string
         default: '2020-12-01'
+    LinkedServiceNameParameter:
+      name: linkedServiceName
+      in: path
+      required: true
+      description: The linked service name.
+      schema:
+        type: string
   schemas:
-    LinkedServiceResource:
-      type: object
-      properties:
-        id:
-          type: string
-          readOnly: true
-        name:
-          type: string
-          readOnly: true
-        type:
-          type: string
-          readOnly: true
-        etag:
-          type: string
-          readOnly: true
-        properties:
-          $ref: '#/components/schemas/LinkedService'
-    LinkedServiceListResponse:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/LinkedServiceResource'
-        nextLink:
-          type: string
     ArtifactRenameRequest:
       type: object
       properties:
@@ -241,6 +215,32 @@ components:
         typeProperties:
           type: object
           description: Type specific properties of the linked service.
+    LinkedServiceResource:
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+          readOnly: true
+        type:
+          type: string
+          readOnly: true
+        etag:
+          type: string
+          readOnly: true
+        properties:
+          $ref: '#/components/schemas/LinkedService'
+    LinkedServiceListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/LinkedServiceResource'
+        nextLink:
+          type: string
   securitySchemes:
     azure_auth:
       type: oauth2
