@@ -164,16 +164,37 @@ components:
         type: string
         default: '2020-12-01'
   schemas:
-    RoleAssignmentDetails:
+    RoleAssignmentDetailsList:
       type: object
       properties:
-        id:
-          type: string
-          description: Role Assignment ID.
-        roleDefinitionId:
+        count:
+          type: integer
+          description: Number of role assignments.
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/RoleAssignmentDetails'
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+    RoleAssignmentRequest:
+      type: object
+      required:
+      - roleId
+      - principalId
+      - scope
+      properties:
+        roleId:
           type: string
           format: uuid
-          description: Role Definition ID.
+          description: Role ID of the Synapse Built-In Role.
         principalId:
           type: string
           format: uuid
@@ -188,37 +209,16 @@ components:
           - User
           - Group
           - ServicePrincipal
-    ErrorResponse:
+    RoleAssignmentDetails:
       type: object
       properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    RoleAssignmentDetailsList:
-      type: object
-      properties:
-        count:
-          type: integer
-          description: Number of role assignments.
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/RoleAssignmentDetails'
-    RoleAssignmentRequest:
-      type: object
-      required:
-      - roleId
-      - principalId
-      - scope
-      properties:
-        roleId:
+        id:
+          type: string
+          description: Role Assignment ID.
+        roleDefinitionId:
           type: string
           format: uuid
-          description: Role ID of the Synapse Built-In Role.
+          description: Role Definition ID.
         principalId:
           type: string
           format: uuid

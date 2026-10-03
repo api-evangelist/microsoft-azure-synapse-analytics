@@ -233,63 +233,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    SparkSession:
-      type: object
-      properties:
-        livyInfo:
-          type: object
-          properties:
-            currentState:
-              type: string
-        name:
-          type: string
-        workspaceName:
-          type: string
-        sparkPoolName:
-          type: string
-        submitterName:
-          type: string
-        state:
-          type: string
-        id:
-          type: integer
-        appId:
-          type: string
-        appInfo:
-          type: object
-          additionalProperties:
-            type: string
-        log:
-          type: array
-          items:
-            type: string
-    SparkStatementCancellationResult:
-      type: object
-      properties:
-        msg:
-          type: string
-          description: The cancellation message.
-    SparkSessionOptions:
-      type: object
-      required:
-      - name
-      properties:
-        name:
-          type: string
-        driverMemory:
-          type: string
-        driverCores:
-          type: integer
-        executorMemory:
-          type: string
-        executorCores:
-          type: integer
-        executorCount:
-          type: integer
-        conf:
-          type: object
-          additionalProperties:
-            type: string
     SparkStatementCollection:
       type: object
       properties:
@@ -352,6 +295,63 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/SparkSession'
+    SparkSession:
+      type: object
+      properties:
+        livyInfo:
+          type: object
+          properties:
+            currentState:
+              type: string
+        name:
+          type: string
+        workspaceName:
+          type: string
+        sparkPoolName:
+          type: string
+        submitterName:
+          type: string
+        state:
+          type: string
+        id:
+          type: integer
+        appId:
+          type: string
+        appInfo:
+          type: object
+          additionalProperties:
+            type: string
+        log:
+          type: array
+          items:
+            type: string
+    SparkStatementCancellationResult:
+      type: object
+      properties:
+        msg:
+          type: string
+          description: The cancellation message.
+    SparkSessionOptions:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          type: string
+        driverMemory:
+          type: string
+        driverCores:
+          type: integer
+        executorMemory:
+          type: string
+        executorCores:
+          type: integer
+        executorCount:
+          type: integer
+        conf:
+          type: object
+          additionalProperties:
+            type: string
   parameters:
     SparkPoolNameParameter:
       name: sparkPoolName

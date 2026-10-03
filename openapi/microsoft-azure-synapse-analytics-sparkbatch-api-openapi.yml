@@ -146,17 +146,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    SparkBatchJobCollection:
-      type: object
-      properties:
-        from:
-          type: integer
-        total:
-          type: integer
-        sessions:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkBatchJob'
     ErrorResponse:
       type: object
       properties:
@@ -167,53 +156,6 @@ components:
               type: string
             message:
               type: string
-    SparkBatchJob:
-      type: object
-      properties:
-        livyInfo:
-          type: object
-          properties:
-            currentState:
-              type: string
-        name:
-          type: string
-        workspaceName:
-          type: string
-        sparkPoolName:
-          type: string
-        submitterName:
-          type: string
-        submitterId:
-          type: string
-        artifactId:
-          type: string
-        jobType:
-          type: string
-          enum:
-          - SparkBatch
-          - SparkSession
-        result:
-          type: string
-          enum:
-          - Uncertain
-          - Succeeded
-          - Failed
-          - Cancelled
-        state:
-          type: string
-          description: The batch state.
-        id:
-          type: integer
-        appId:
-          type: string
-        appInfo:
-          type: object
-          additionalProperties:
-            type: string
-        log:
-          type: array
-          items:
-            type: string
     SparkBatchJobOptions:
       type: object
       required:
@@ -263,6 +205,64 @@ components:
           type: integer
         executorCount:
           type: integer
+    SparkBatchJob:
+      type: object
+      properties:
+        livyInfo:
+          type: object
+          properties:
+            currentState:
+              type: string
+        name:
+          type: string
+        workspaceName:
+          type: string
+        sparkPoolName:
+          type: string
+        submitterName:
+          type: string
+        submitterId:
+          type: string
+        artifactId:
+          type: string
+        jobType:
+          type: string
+          enum:
+          - SparkBatch
+          - SparkSession
+        result:
+          type: string
+          enum:
+          - Uncertain
+          - Succeeded
+          - Failed
+          - Cancelled
+        state:
+          type: string
+          description: The batch state.
+        id:
+          type: integer
+        appId:
+          type: string
+        appInfo:
+          type: object
+          additionalProperties:
+            type: string
+        log:
+          type: array
+          items:
+            type: string
+    SparkBatchJobCollection:
+      type: object
+      properties:
+        from:
+          type: integer
+        total:
+          type: integer
+        sessions:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkBatchJob'
   parameters:
     SparkPoolNameParameter:
       name: sparkPoolName

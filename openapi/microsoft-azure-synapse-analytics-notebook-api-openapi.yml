@@ -179,6 +179,21 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
+  parameters:
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2020-12-01'
+    NotebookNameParameter:
+      name: notebookName
+      in: path
+      required: true
+      description: The notebook name.
+      schema:
+        type: string
   schemas:
     NotebookCell:
       type: object
@@ -200,15 +215,34 @@ components:
           items:
             type: object
           description: Cell outputs.
-    NotebookListResponse:
+    ErrorResponse:
       type: object
       properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/NotebookResource'
-        nextLink:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+    NotebookResource:
+      type: object
+      description: Notebook resource.
+      properties:
+        id:
           type: string
+          readOnly: true
+        name:
+          type: string
+          readOnly: true
+        type:
+          type: string
+          readOnly: true
+        etag:
+          type: string
+          readOnly: true
+        properties:
+          $ref: '#/components/schemas/Notebook'
     ArtifactRenameRequest:
       type: object
       properties:
@@ -270,49 +304,15 @@ components:
           properties:
             name:
               type: string
-    ErrorResponse:
+    NotebookListResponse:
       type: object
       properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    NotebookResource:
-      type: object
-      description: Notebook resource.
-      properties:
-        id:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/NotebookResource'
+        nextLink:
           type: string
-          readOnly: true
-        name:
-          type: string
-          readOnly: true
-        type:
-          type: string
-          readOnly: true
-        etag:
-          type: string
-          readOnly: true
-        properties:
-          $ref: '#/components/schemas/Notebook'
-  parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2020-12-01'
-    NotebookNameParameter:
-      name: notebookName
-      in: path
-      required: true
-      description: The notebook name.
-      schema:
-        type: string
   securitySchemes:
     azure_auth:
       type: oauth2

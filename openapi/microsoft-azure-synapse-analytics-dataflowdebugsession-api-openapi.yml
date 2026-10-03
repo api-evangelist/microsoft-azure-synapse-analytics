@@ -156,20 +156,98 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
-  parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2020-12-01'
   schemas:
+    CreateDataFlowDebugSessionRequest:
+      type: object
+      properties:
+        computeType:
+          type: string
+        coreCount:
+          type: integer
+        timeToLiveInMinutes:
+          type: integer
+        integrationRuntime:
+          type: object
+          properties:
+            name:
+              type: string
+            properties:
+              type: object
+    AddDataFlowToDebugSessionResponse:
+      type: object
+      properties:
+        jobVersion:
+          type: string
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
     DeleteDataFlowDebugSessionRequest:
       type: object
       properties:
         sessionId:
           type: string
+    DataFlowDebugCommandRequest:
+      type: object
+      properties:
+        sessionId:
+          type: string
+        command:
+          type: string
+          enum:
+          - executePreviewQuery
+          - executeStatisticsQuery
+          - executeExpressionQuery
+        commandPayload:
+          type: object
+          properties:
+            streamName:
+              type: string
+            rowLimits:
+              type: integer
+            columns:
+              type: array
+              items:
+                type: string
+            expression:
+              type: string
+    CreateDataFlowDebugSessionResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        sessionId:
+          type: string
+    DataFlowDebugPackage:
+      type: object
+      properties:
+        sessionId:
+          type: string
+        dataFlow:
+          type: object
+          properties:
+            name:
+              type: string
+            properties:
+              type: object
+        datasets:
+          type: array
+          items:
+            type: object
+        linkedServices:
+          type: array
+          items:
+            type: object
+        staging:
+          type: object
+        debugSettings:
+          type: object
     QueryDataFlowDebugSessionsResponse:
       type: object
       properties:
@@ -198,92 +276,6 @@ components:
                 type: string
         nextLink:
           type: string
-    AddDataFlowToDebugSessionResponse:
-      type: object
-      properties:
-        jobVersion:
-          type: string
-    CreateDataFlowDebugSessionResponse:
-      type: object
-      properties:
-        status:
-          type: string
-        sessionId:
-          type: string
-    CreateDataFlowDebugSessionRequest:
-      type: object
-      properties:
-        computeType:
-          type: string
-        coreCount:
-          type: integer
-        timeToLiveInMinutes:
-          type: integer
-        integrationRuntime:
-          type: object
-          properties:
-            name:
-              type: string
-            properties:
-              type: object
-    DataFlowDebugPackage:
-      type: object
-      properties:
-        sessionId:
-          type: string
-        dataFlow:
-          type: object
-          properties:
-            name:
-              type: string
-            properties:
-              type: object
-        datasets:
-          type: array
-          items:
-            type: object
-        linkedServices:
-          type: array
-          items:
-            type: object
-        staging:
-          type: object
-        debugSettings:
-          type: object
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    DataFlowDebugCommandRequest:
-      type: object
-      properties:
-        sessionId:
-          type: string
-        command:
-          type: string
-          enum:
-          - executePreviewQuery
-          - executeStatisticsQuery
-          - executeExpressionQuery
-        commandPayload:
-          type: object
-          properties:
-            streamName:
-              type: string
-            rowLimits:
-              type: integer
-            columns:
-              type: array
-              items:
-                type: string
-            expression:
-              type: string
     DataFlowDebugCommandResponse:
       type: object
       properties:
@@ -291,6 +283,14 @@ components:
           type: string
         data:
           type: string
+  parameters:
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2020-12-01'
   securitySchemes:
     azure_auth:
       type: oauth2
