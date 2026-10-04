@@ -144,13 +144,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2020-12-01'
     LibraryNameParameter:
       name: libraryName
       in: path
@@ -158,6 +151,13 @@ components:
       description: Library name (e.g., library.jar or library.whl).
       schema:
         type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2020-12-01'
   schemas:
     LibraryListResponse:
       type: object
@@ -168,16 +168,6 @@ components:
             $ref: '#/components/schemas/LibraryResource'
         nextLink:
           type: string
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     LibraryResource:
       type: object
       properties:
@@ -218,6 +208,16 @@ components:
             creatorId:
               type: string
               readOnly: true
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
   securitySchemes:
     azure_auth:
       type: oauth2

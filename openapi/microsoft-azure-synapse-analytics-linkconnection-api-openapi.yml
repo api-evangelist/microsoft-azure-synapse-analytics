@@ -199,22 +199,65 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
-  parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: 2023-04-18-preview
-    LinkConnectionNameParameter:
-      name: linkConnectionName
-      in: path
-      required: true
-      description: The link connection name.
-      schema:
-        type: string
   schemas:
+    LinkConnectionListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/LinkConnectionResource'
+        nextLink:
+          type: string
+    LinkConnectionDetailedStatus:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        isApplyingChanges:
+          type: boolean
+        isPartiallyFailed:
+          type: boolean
+        startTime:
+          type: string
+          format: date-time
+        stopTime:
+          type: string
+          format: date-time
+        status:
+          type: string
+        continuousRunId:
+          type: string
+        error:
+          type: object
+    LinkTableListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              source:
+                type: object
+                properties:
+                  tableName:
+                    type: string
+                  schemaName:
+                    type: string
+              target:
+                type: object
+                properties:
+                  tableName:
+                    type: string
+                  schemaName:
+                    type: string
+                  distributionOptions:
+                    type: object
     ErrorResponse:
       type: object
       properties:
@@ -277,64 +320,21 @@ components:
                   type: integer
                 computeType:
                   type: string
-    LinkTableListResponse:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-              source:
-                type: object
-                properties:
-                  tableName:
-                    type: string
-                  schemaName:
-                    type: string
-              target:
-                type: object
-                properties:
-                  tableName:
-                    type: string
-                  schemaName:
-                    type: string
-                  distributionOptions:
-                    type: object
-    LinkConnectionListResponse:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/LinkConnectionResource'
-        nextLink:
-          type: string
-    LinkConnectionDetailedStatus:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        isApplyingChanges:
-          type: boolean
-        isPartiallyFailed:
-          type: boolean
-        startTime:
-          type: string
-          format: date-time
-        stopTime:
-          type: string
-          format: date-time
-        status:
-          type: string
-        continuousRunId:
-          type: string
-        error:
-          type: object
+  parameters:
+    LinkConnectionNameParameter:
+      name: linkConnectionName
+      in: path
+      required: true
+      description: The link connection name.
+      schema:
+        type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: 2023-04-18-preview
   securitySchemes:
     azure_auth:
       type: oauth2

@@ -91,27 +91,6 @@ components:
         type: string
         default: '2020-12-01'
   schemas:
-    SparkJobListViewResponse:
-      type: object
-      description: List of Spark jobs response.
-      properties:
-        nJobs:
-          type: integer
-          description: Number of Spark jobs.
-        sparkJobs:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkJob'
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     SparkJob:
       type: object
       properties:
@@ -156,6 +135,17 @@ components:
                 type: string
               name:
                 type: string
+    SparkJobListViewResponse:
+      type: object
+      description: List of Spark jobs response.
+      properties:
+        nJobs:
+          type: integer
+          description: Number of Spark jobs.
+        sparkJobs:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkJob'
     SqlQueryStringDataModel:
       type: object
       description: SQL query string data model.
@@ -163,6 +153,16 @@ components:
         query:
           type: string
           description: The SQL query string.
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
   securitySchemes:
     azure_auth:
       type: oauth2

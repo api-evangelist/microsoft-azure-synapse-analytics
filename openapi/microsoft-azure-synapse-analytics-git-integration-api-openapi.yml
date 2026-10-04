@@ -61,12 +61,6 @@ components:
               type: string
             message:
               type: string
-    GitHubAccessTokenResponse:
-      type: object
-      properties:
-        gitHubAccessToken:
-          type: string
-          description: The GitHub access token.
     GitHubAccessTokenRequest:
       type: object
       required:
@@ -83,6 +77,12 @@ components:
         gitHubAccessTokenBaseUrl:
           type: string
           description: The GitHub access token base URL.
+    GitHubAccessTokenResponse:
+      type: object
+      properties:
+        gitHubAccessToken:
+          type: string
+          description: The GitHub access token.
   parameters:
     ApiVersionParameter:
       name: api-version

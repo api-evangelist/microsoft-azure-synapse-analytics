@@ -156,32 +156,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
-  parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2020-12-01'
-    DataFlowNameParameter:
-      name: dataFlowName
-      in: path
-      required: true
-      description: The data flow name.
-      schema:
-        type: string
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     ArtifactRenameRequest:
       type: object
       properties:
@@ -278,6 +253,31 @@ components:
             script:
               type: string
               description: DataFlow script.
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+  parameters:
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2020-12-01'
+    DataFlowNameParameter:
+      name: dataFlowName
+      in: path
+      required: true
+      description: The data flow name.
+      schema:
+        type: string
   securitySchemes:
     azure_auth:
       type: oauth2

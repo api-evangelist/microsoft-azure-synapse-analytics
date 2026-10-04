@@ -156,22 +156,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
-  parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: 2021-06-01-preview
-    SparkConfigurationNameParameter:
-      name: sparkConfigurationName
-      in: path
-      required: true
-      description: The Spark configuration name.
-      schema:
-        type: string
   schemas:
+    ArtifactRenameRequest:
+      type: object
+      properties:
+        newName:
+          type: string
     SparkConfigurationListResponse:
       type: object
       properties:
@@ -218,11 +208,6 @@ components:
               type: string
             message:
               type: string
-    ArtifactRenameRequest:
-      type: object
-      properties:
-        newName:
-          type: string
     SparkConfigurationResource:
       type: object
       properties:
@@ -240,6 +225,21 @@ components:
           readOnly: true
         properties:
           $ref: '#/components/schemas/SparkConfiguration'
+  parameters:
+    SparkConfigurationNameParameter:
+      name: sparkConfigurationName
+      in: path
+      required: true
+      description: The Spark configuration name.
+      schema:
+        type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: 2021-06-01-preview
   securitySchemes:
     azure_auth:
       type: oauth2

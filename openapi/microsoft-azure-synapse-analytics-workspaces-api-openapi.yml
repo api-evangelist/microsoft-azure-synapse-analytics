@@ -187,49 +187,26 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
-  parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      description: The API version to use for this operation.
-      schema:
-        type: string
-        default: '2021-06-01'
-    WorkspaceNameParameter:
-      name: workspaceName
-      in: path
-      required: true
-      description: The name of the workspace.
-      schema:
-        type: string
-    ResourceGroupNameParameter:
-      name: resourceGroupName
-      in: path
-      required: true
-      description: The name of the resource group.
-      schema:
-        type: string
-    SubscriptionIdParameter:
-      name: subscriptionId
-      in: path
-      required: true
-      description: The ID of the target subscription.
-      schema:
-        type: string
   schemas:
-    WorkspaceInfoListResult:
+    ManagedIdentity:
       type: object
-      description: List of workspaces.
+      description: The workspace managed identity.
       properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/Workspace'
-          description: List of workspaces.
-        nextLink:
+        principalId:
           type: string
-          description: Link to the next page of results.
+          description: The principal ID of the workspace managed identity.
+          readOnly: true
+        tenantId:
+          type: string
+          description: The tenant ID of the workspace managed identity.
+          readOnly: true
+        type:
+          type: string
+          description: The type of managed identity.
+          enum:
+          - None
+          - SystemAssigned
+          - SystemAssigned,UserAssigned
     Workspace:
       type: object
       description: A workspace resource.
@@ -258,98 +235,18 @@ components:
           $ref: '#/components/schemas/ManagedIdentity'
         properties:
           $ref: '#/components/schemas/WorkspaceProperties'
-    ErrorResponse:
+    WorkspaceInfoListResult:
       type: object
-      description: Error response from the Azure Synapse service.
+      description: List of workspaces.
       properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-              description: Error code.
-            message:
-              type: string
-              description: Error message.
-    DataLakeStorageAccountDetails:
-      type: object
-      description: Details of the default data lake storage account.
-      properties:
-        accountUrl:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Workspace'
+          description: List of workspaces.
+        nextLink:
           type: string
-          description: Account URL.
-        filesystem:
-          type: string
-          description: Filesystem name.
-        resourceId:
-          type: string
-          description: ARM resource ID of the storage account.
-        createManagedPrivateEndpoint:
-          type: boolean
-          description: Create managed private endpoint to the storage account.
-    WorkspacePatchInfo:
-      type: object
-      description: Workspace patch details.
-      properties:
-        tags:
-          type: object
-          additionalProperties:
-            type: string
-          description: Resource tags.
-        identity:
-          $ref: '#/components/schemas/ManagedIdentity'
-        properties:
-          type: object
-          properties:
-            sqlAdministratorLoginPassword:
-              type: string
-              description: SQL administrator login password.
-            managedVirtualNetworkSettings:
-              type: object
-              properties:
-                preventDataExfiltration:
-                  type: boolean
-                allowedAadTenantIdsForLinking:
-                  type: array
-                  items:
-                    type: string
-            encryption:
-              type: object
-              properties:
-                cmk:
-                  type: object
-                  properties:
-                    key:
-                      type: object
-                      properties:
-                        name:
-                          type: string
-                        keyVaultUrl:
-                          type: string
-            publicNetworkAccess:
-              type: string
-              enum:
-              - Enabled
-              - Disabled
-    ManagedIdentity:
-      type: object
-      description: The workspace managed identity.
-      properties:
-        principalId:
-          type: string
-          description: The principal ID of the workspace managed identity.
-          readOnly: true
-        tenantId:
-          type: string
-          description: The tenant ID of the workspace managed identity.
-          readOnly: true
-        type:
-          type: string
-          description: The type of managed identity.
-          enum:
-          - None
-          - SystemAssigned
-          - SystemAssigned,UserAssigned
+          description: Link to the next page of results.
     WorkspaceProperties:
       type: object
       description: Workspace properties.
@@ -423,6 +320,109 @@ components:
           type: string
           description: The workspace unique identifier.
           readOnly: true
+    DataLakeStorageAccountDetails:
+      type: object
+      description: Details of the default data lake storage account.
+      properties:
+        accountUrl:
+          type: string
+          description: Account URL.
+        filesystem:
+          type: string
+          description: Filesystem name.
+        resourceId:
+          type: string
+          description: ARM resource ID of the storage account.
+        createManagedPrivateEndpoint:
+          type: boolean
+          description: Create managed private endpoint to the storage account.
+    WorkspacePatchInfo:
+      type: object
+      description: Workspace patch details.
+      properties:
+        tags:
+          type: object
+          additionalProperties:
+            type: string
+          description: Resource tags.
+        identity:
+          $ref: '#/components/schemas/ManagedIdentity'
+        properties:
+          type: object
+          properties:
+            sqlAdministratorLoginPassword:
+              type: string
+              description: SQL administrator login password.
+            managedVirtualNetworkSettings:
+              type: object
+              properties:
+                preventDataExfiltration:
+                  type: boolean
+                allowedAadTenantIdsForLinking:
+                  type: array
+                  items:
+                    type: string
+            encryption:
+              type: object
+              properties:
+                cmk:
+                  type: object
+                  properties:
+                    key:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        keyVaultUrl:
+                          type: string
+            publicNetworkAccess:
+              type: string
+              enum:
+              - Enabled
+              - Disabled
+    ErrorResponse:
+      type: object
+      description: Error response from the Azure Synapse service.
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              description: Error code.
+            message:
+              type: string
+              description: Error message.
+  parameters:
+    WorkspaceNameParameter:
+      name: workspaceName
+      in: path
+      required: true
+      description: The name of the workspace.
+      schema:
+        type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      description: The API version to use for this operation.
+      schema:
+        type: string
+        default: '2021-06-01'
+    ResourceGroupNameParameter:
+      name: resourceGroupName
+      in: path
+      required: true
+      description: The name of the resource group.
+      schema:
+        type: string
+    SubscriptionIdParameter:
+      name: subscriptionId
+      in: path
+      required: true
+      description: The ID of the target subscription.
+      schema:
+        type: string
   securitySchemes:
     azure_auth:
       type: oauth2

@@ -242,16 +242,23 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/SparkStatement'
-    ErrorResponse:
+    SparkStatementCancellationResult:
       type: object
       properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
+        msg:
+          type: string
+          description: The cancellation message.
+    SparkSessionCollection:
+      type: object
+      properties:
+        from:
+          type: integer
+        total:
+          type: integer
+        sessions:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkSession'
     SparkStatement:
       type: object
       properties:
@@ -270,31 +277,6 @@ components:
               type: integer
             data:
               type: object
-    SparkStatementOptions:
-      type: object
-      properties:
-        code:
-          type: string
-          description: The code to execute.
-        kind:
-          type: string
-          description: The language of the code.
-          enum:
-          - spark
-          - pyspark
-          - dotnetspark
-          - sql
-    SparkSessionCollection:
-      type: object
-      properties:
-        from:
-          type: integer
-        total:
-          type: integer
-        sessions:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkSession'
     SparkSession:
       type: object
       properties:
@@ -325,12 +307,6 @@ components:
           type: array
           items:
             type: string
-    SparkStatementCancellationResult:
-      type: object
-      properties:
-        msg:
-          type: string
-          description: The cancellation message.
     SparkSessionOptions:
       type: object
       required:
@@ -352,6 +328,30 @@ components:
           type: object
           additionalProperties:
             type: string
+    SparkStatementOptions:
+      type: object
+      properties:
+        code:
+          type: string
+          description: The code to execute.
+        kind:
+          type: string
+          description: The language of the code.
+          enum:
+          - spark
+          - pyspark
+          - dotnetspark
+          - sql
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
   parameters:
     SparkPoolNameParameter:
       name: sparkPoolName

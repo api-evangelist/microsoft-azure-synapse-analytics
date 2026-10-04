@@ -219,6 +219,25 @@ components:
       schema:
         type: string
   schemas:
+    PrivateLinkHubInfoListResult:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrivateLinkHub'
+        nextLink:
+          type: string
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
     PrivateLinkHubPatchInfo:
       type: object
       properties:
@@ -258,25 +277,6 @@ components:
                 properties:
                   id:
                     type: string
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-    PrivateLinkHubInfoListResult:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/PrivateLinkHub'
-        nextLink:
-          type: string
   securitySchemes:
     azure_auth:
       type: oauth2
