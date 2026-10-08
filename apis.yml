@@ -3477,6 +3477,10 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection
 common:
+- type: RateLimits
+  url: rate-limits/microsoft-azure-synapse-analytics-rate-limits.yml
+- type: FinOps
+  url: finops/microsoft-azure-synapse-analytics-finops.yml
 - type: Plans
   url: plans/microsoft-azure-synapse-analytics-plans-pricing.yml
 - type: CapabilityMap
