@@ -71,3 +71,58 @@ rate_limit_statements:
 - Queries will incur a minimum charge of 10 MB and each query will be rounded up to the nearest 1 MB of
   data processed
 - requires a minimum of two compute instances
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: Pre-Purchase Plan Tier 1 (5,000 SCUs, 6% discount)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - one-time
+  - name: Pre-Purchase Plan Tier 2 (10,000 SCUs, 8% discount)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - one-time
+  - name: Pre-Purchase Plan Tier 3 (24,000 SCUs, 11% discount)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - one-time
+  - name: Pre-Purchase Plan Tier 4 (60,000 SCUs, 16% discount)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - one-time
+  - name: Pre-Purchase Plan Tier 5 (150,000 SCUs, 22% discount)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - one-time
+  - name: Pre-Purchase Plan Tier 6 (360,000 SCUs, 28% discount)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - one-time
