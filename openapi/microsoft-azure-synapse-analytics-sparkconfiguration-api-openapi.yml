@@ -157,20 +157,23 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    ArtifactRenameRequest:
+    SparkConfigurationResource:
       type: object
       properties:
-        newName:
+        id:
           type: string
-    SparkConfigurationListResponse:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkConfigurationResource'
-        nextLink:
+          readOnly: true
+        name:
           type: string
+          readOnly: true
+        type:
+          type: string
+          readOnly: true
+        etag:
+          type: string
+          readOnly: true
+        properties:
+          $ref: '#/components/schemas/SparkConfiguration'
     SparkConfiguration:
       type: object
       properties:
@@ -198,6 +201,15 @@ components:
           type: object
           additionalProperties:
             type: string
+    SparkConfigurationListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkConfigurationResource'
+        nextLink:
+          type: string
     ErrorResponse:
       type: object
       properties:
@@ -208,31 +220,12 @@ components:
               type: string
             message:
               type: string
-    SparkConfigurationResource:
+    ArtifactRenameRequest:
       type: object
       properties:
-        id:
+        newName:
           type: string
-          readOnly: true
-        name:
-          type: string
-          readOnly: true
-        type:
-          type: string
-          readOnly: true
-        etag:
-          type: string
-          readOnly: true
-        properties:
-          $ref: '#/components/schemas/SparkConfiguration'
   parameters:
-    SparkConfigurationNameParameter:
-      name: sparkConfigurationName
-      in: path
-      required: true
-      description: The Spark configuration name.
-      schema:
-        type: string
     ApiVersionParameter:
       name: api-version
       in: query
@@ -240,6 +233,13 @@ components:
       schema:
         type: string
         default: 2021-06-01-preview
+    SparkConfigurationNameParameter:
+      name: sparkConfigurationName
+      in: path
+      required: true
+      description: The Spark configuration name.
+      schema:
+        type: string
   securitySchemes:
     azure_auth:
       type: oauth2

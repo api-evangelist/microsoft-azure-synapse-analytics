@@ -145,7 +145,26 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
+  parameters:
+    SparkPoolNameParameter:
+      name: sparkPoolName
+      in: path
+      required: true
+      description: Name of the Spark pool.
+      schema:
+        type: string
   schemas:
+    SparkBatchJobCollection:
+      type: object
+      properties:
+        from:
+          type: integer
+        total:
+          type: integer
+        sessions:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkBatchJob'
     SparkBatchJobOptions:
       type: object
       required:
@@ -195,17 +214,6 @@ components:
           type: integer
         executorCount:
           type: integer
-    SparkBatchJobCollection:
-      type: object
-      properties:
-        from:
-          type: integer
-        total:
-          type: integer
-        sessions:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkBatchJob'
     SparkBatchJob:
       type: object
       properties:
@@ -263,14 +271,6 @@ components:
               type: string
             message:
               type: string
-  parameters:
-    SparkPoolNameParameter:
-      name: sparkPoolName
-      in: path
-      required: true
-      description: Name of the Spark pool.
-      schema:
-        type: string
   securitySchemes:
     azure_auth:
       type: oauth2

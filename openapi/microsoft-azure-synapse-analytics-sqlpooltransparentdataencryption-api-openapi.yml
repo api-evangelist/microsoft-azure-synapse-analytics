@@ -97,19 +97,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   parameters:
-    SqlPoolNameParameter:
-      name: sqlPoolName
-      in: path
-      required: true
-      description: SQL pool name.
-      schema:
-        type: string
-    WorkspaceNameParameter:
-      name: workspaceName
-      in: path
-      required: true
-      schema:
-        type: string
     ApiVersionParameter:
       name: api-version
       in: query
@@ -117,6 +104,12 @@ components:
       schema:
         type: string
         default: '2021-06-01'
+    WorkspaceNameParameter:
+      name: workspaceName
+      in: path
+      required: true
+      schema:
+        type: string
     ResourceGroupNameParameter:
       name: resourceGroupName
       in: path
@@ -127,6 +120,13 @@ components:
       name: subscriptionId
       in: path
       required: true
+      schema:
+        type: string
+    SqlPoolNameParameter:
+      name: sqlPoolName
+      in: path
+      required: true
+      description: SQL pool name.
       schema:
         type: string
   schemas:

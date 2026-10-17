@@ -170,6 +170,41 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
+    LibraryInfo:
+      type: object
+      description: Library information.
+      properties:
+        name:
+          type: string
+        path:
+          type: string
+        containerName:
+          type: string
+        type:
+          type: string
+    DynamicExecutorAllocation:
+      type: object
+      description: Dynamic executor allocation.
+      properties:
+        enabled:
+          type: boolean
+          description: Whether dynamic executor allocation is enabled.
+        minExecutors:
+          type: integer
+          description: Minimum number of executors.
+        maxExecutors:
+          type: integer
+          description: Maximum number of executors.
+    BigDataPoolResourceInfoListResult:
+      type: object
+      description: Collection of Big Data pool resources.
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/BigDataPoolResourceInfo'
+        nextLink:
+          type: string
     BigDataPoolResourceProperties:
       type: object
       description: Properties of a Big Data pool.
@@ -234,37 +269,6 @@ components:
           - MemoryOptimized
           - HardwareAcceleratedFPGA
           - HardwareAcceleratedGPU
-    BigDataPoolPatchInfo:
-      type: object
-      description: Properties for updating a Big Data pool.
-      properties:
-        tags:
-          type: object
-          additionalProperties:
-            type: string
-    AutoPauseProperties:
-      type: object
-      description: Auto-pause properties of a Big Data pool.
-      properties:
-        delayInMinutes:
-          type: integer
-          description: Number of minutes of idle time before auto-pause.
-        enabled:
-          type: boolean
-          description: Whether auto-pausing is enabled.
-    DynamicExecutorAllocation:
-      type: object
-      description: Dynamic executor allocation.
-      properties:
-        enabled:
-          type: boolean
-          description: Whether dynamic executor allocation is enabled.
-        minExecutors:
-          type: integer
-          description: Minimum number of executors.
-        maxExecutors:
-          type: integer
-          description: Maximum number of executors.
     BigDataPoolResourceInfo:
       type: object
       description: A Big Data pool resource.
@@ -287,51 +291,6 @@ components:
             type: string
         properties:
           $ref: '#/components/schemas/BigDataPoolResourceProperties'
-    AutoScaleProperties:
-      type: object
-      description: Auto-scale properties of a Big Data pool.
-      properties:
-        minNodeCount:
-          type: integer
-          description: The minimum number of nodes.
-        enabled:
-          type: boolean
-          description: Whether auto-scaling is enabled.
-        maxNodeCount:
-          type: integer
-          description: The maximum number of nodes.
-    BigDataPoolResourceInfoListResult:
-      type: object
-      description: Collection of Big Data pool resources.
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/BigDataPoolResourceInfo'
-        nextLink:
-          type: string
-    LibraryInfo:
-      type: object
-      description: Library information.
-      properties:
-        name:
-          type: string
-        path:
-          type: string
-        containerName:
-          type: string
-        type:
-          type: string
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
     SparkConfigProperties:
       type: object
       description: Spark configuration file properties.
@@ -351,13 +310,48 @@ components:
           enum:
           - File
           - Artifact
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+    AutoPauseProperties:
+      type: object
+      description: Auto-pause properties of a Big Data pool.
+      properties:
+        delayInMinutes:
+          type: integer
+          description: Number of minutes of idle time before auto-pause.
+        enabled:
+          type: boolean
+          description: Whether auto-pausing is enabled.
+    AutoScaleProperties:
+      type: object
+      description: Auto-scale properties of a Big Data pool.
+      properties:
+        minNodeCount:
+          type: integer
+          description: The minimum number of nodes.
+        enabled:
+          type: boolean
+          description: Whether auto-scaling is enabled.
+        maxNodeCount:
+          type: integer
+          description: The maximum number of nodes.
+    BigDataPoolPatchInfo:
+      type: object
+      description: Properties for updating a Big Data pool.
+      properties:
+        tags:
+          type: object
+          additionalProperties:
+            type: string
   parameters:
-    WorkspaceNameParameter:
-      name: workspaceName
-      in: path
-      required: true
-      schema:
-        type: string
     ApiVersionParameter:
       name: api-version
       in: query
@@ -365,11 +359,10 @@ components:
       schema:
         type: string
         default: '2021-06-01'
-    BigDataPoolNameParameter:
-      name: bigDataPoolName
+    WorkspaceNameParameter:
+      name: workspaceName
       in: path
       required: true
-      description: Big Data pool name.
       schema:
         type: string
     ResourceGroupNameParameter:
@@ -382,6 +375,13 @@ components:
       name: subscriptionId
       in: path
       required: true
+      schema:
+        type: string
+    BigDataPoolNameParameter:
+      name: bigDataPoolName
+      in: path
+      required: true
+      description: Big Data pool name.
       schema:
         type: string
   securitySchemes:

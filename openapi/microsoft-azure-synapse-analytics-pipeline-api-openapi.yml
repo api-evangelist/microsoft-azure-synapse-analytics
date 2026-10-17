@@ -205,12 +205,27 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    ArtifactRenameRequest:
+    VariableSpecification:
       type: object
       properties:
-        newName:
+        type:
           type: string
-          description: New name of the artifact.
+          enum:
+          - String
+          - Bool
+          - Array
+        defaultValue:
+          description: Default value of the variable.
+    PipelineListResponse:
+      type: object
+      description: A list of pipeline resources.
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/PipelineResource'
+        nextLink:
+          type: string
     PipelineResource:
       type: object
       description: Pipeline resource.
@@ -229,48 +244,29 @@ components:
           readOnly: true
         properties:
           $ref: '#/components/schemas/Pipeline'
-    Activity:
+    ErrorResponse:
       type: object
-      description: A pipeline activity.
-      required:
-      - name
-      - type
       properties:
-        name:
-          type: string
-          description: Activity name.
-        type:
-          type: string
-          description: Type of activity.
-        description:
-          type: string
-          description: Activity description.
-        dependsOn:
-          type: array
-          items:
-            type: object
-            properties:
-              activity:
-                type: string
-              dependencyConditions:
-                type: array
-                items:
-                  type: string
-                  enum:
-                  - Succeeded
-                  - Failed
-                  - Skipped
-                  - Completed
-    PipelineListResponse:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+    CreateRunResponse:
       type: object
-      description: A list of pipeline resources.
+      description: Response body with a run identifier.
       properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/PipelineResource'
-        nextLink:
+        runId:
           type: string
+          description: Identifier of the created run.
+    ArtifactRenameRequest:
+      type: object
+      properties:
+        newName:
+          type: string
+          description: New name of the artifact.
     Pipeline:
       type: object
       description: A pipeline definition.
@@ -322,34 +318,38 @@ components:
           - SecureString
         defaultValue:
           description: Default value of the parameter.
-    CreateRunResponse:
+    Activity:
       type: object
-      description: Response body with a run identifier.
+      description: A pipeline activity.
+      required:
+      - name
+      - type
       properties:
-        runId:
+        name:
           type: string
-          description: Identifier of the created run.
-    VariableSpecification:
-      type: object
-      properties:
+          description: Activity name.
         type:
           type: string
-          enum:
-          - String
-          - Bool
-          - Array
-        defaultValue:
-          description: Default value of the variable.
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
+          description: Type of activity.
+        description:
+          type: string
+          description: Activity description.
+        dependsOn:
+          type: array
+          items:
+            type: object
+            properties:
+              activity:
+                type: string
+              dependencyConditions:
+                type: array
+                items:
+                  type: string
+                  enum:
+                  - Succeeded
+                  - Failed
+                  - Skipped
+                  - Completed
   parameters:
     ApiVersionParameter:
       name: api-version

@@ -157,37 +157,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    ArtifactRenameRequest:
-      type: object
-      properties:
-        newName:
-          type: string
-    DataFlowListResponse:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/DataFlowResource'
-        nextLink:
-          type: string
-    DataFlowResource:
-      type: object
-      properties:
-        id:
-          type: string
-          readOnly: true
-        name:
-          type: string
-          readOnly: true
-        type:
-          type: string
-          readOnly: true
-        etag:
-          type: string
-          readOnly: true
-        properties:
-          $ref: '#/components/schemas/DataFlow'
     DataFlow:
       type: object
       required:
@@ -253,6 +222,23 @@ components:
             script:
               type: string
               description: DataFlow script.
+    DataFlowResource:
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+          readOnly: true
+        type:
+          type: string
+          readOnly: true
+        etag:
+          type: string
+          readOnly: true
+        properties:
+          $ref: '#/components/schemas/DataFlow'
     ErrorResponse:
       type: object
       properties:
@@ -263,6 +249,20 @@ components:
               type: string
             message:
               type: string
+    ArtifactRenameRequest:
+      type: object
+      properties:
+        newName:
+          type: string
+    DataFlowListResponse:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/DataFlowResource'
+        nextLink:
+          type: string
   parameters:
     ApiVersionParameter:
       name: api-version

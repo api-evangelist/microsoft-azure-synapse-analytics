@@ -157,11 +157,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    ArtifactRenameRequest:
-      type: object
-      properties:
-        newName:
-          type: string
     LinkedServiceListResponse:
       type: object
       properties:
@@ -199,6 +194,16 @@ components:
         typeProperties:
           type: object
           description: Type specific properties of the linked service.
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
     LinkedServiceResource:
       type: object
       properties:
@@ -216,24 +221,12 @@ components:
           readOnly: true
         properties:
           $ref: '#/components/schemas/LinkedService'
-    ErrorResponse:
+    ArtifactRenameRequest:
       type: object
       properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
+        newName:
+          type: string
   parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        default: '2020-12-01'
     LinkedServiceNameParameter:
       name: linkedServiceName
       in: path
@@ -241,6 +234,13 @@ components:
       description: The linked service name.
       schema:
         type: string
+    ApiVersionParameter:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        default: '2020-12-01'
   securitySchemes:
     azure_auth:
       type: oauth2

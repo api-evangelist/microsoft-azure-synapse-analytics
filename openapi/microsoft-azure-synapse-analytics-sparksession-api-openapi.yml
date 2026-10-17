@@ -233,32 +233,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    SparkStatementCollection:
-      type: object
-      properties:
-        total:
-          type: integer
-        statements:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkStatement'
-    SparkStatementCancellationResult:
-      type: object
-      properties:
-        msg:
-          type: string
-          description: The cancellation message.
-    SparkSessionCollection:
-      type: object
-      properties:
-        from:
-          type: integer
-        total:
-          type: integer
-        sessions:
-          type: array
-          items:
-            $ref: '#/components/schemas/SparkSession'
     SparkStatement:
       type: object
       properties:
@@ -307,6 +281,26 @@ components:
           type: array
           items:
             type: string
+    SparkStatementCancellationResult:
+      type: object
+      properties:
+        msg:
+          type: string
+          description: The cancellation message.
+    SparkStatementOptions:
+      type: object
+      properties:
+        code:
+          type: string
+          description: The code to execute.
+        kind:
+          type: string
+          description: The language of the code.
+          enum:
+          - spark
+          - pyspark
+          - dotnetspark
+          - sql
     SparkSessionOptions:
       type: object
       required:
@@ -328,20 +322,6 @@ components:
           type: object
           additionalProperties:
             type: string
-    SparkStatementOptions:
-      type: object
-      properties:
-        code:
-          type: string
-          description: The code to execute.
-        kind:
-          type: string
-          description: The language of the code.
-          enum:
-          - spark
-          - pyspark
-          - dotnetspark
-          - sql
     ErrorResponse:
       type: object
       properties:
@@ -352,6 +332,26 @@ components:
               type: string
             message:
               type: string
+    SparkSessionCollection:
+      type: object
+      properties:
+        from:
+          type: integer
+        total:
+          type: integer
+        sessions:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkSession'
+    SparkStatementCollection:
+      type: object
+      properties:
+        total:
+          type: integer
+        statements:
+          type: array
+          items:
+            $ref: '#/components/schemas/SparkStatement'
   parameters:
     SparkPoolNameParameter:
       name: sparkPoolName
