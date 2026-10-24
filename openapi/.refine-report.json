@@ -30,7 +30,8 @@
     "_original/azure-synapse-analytics-sql-script-openapi.yml",
     "_original/azure-synapse-analytics-synapse-link-openapi.yml",
     "_original/azure-synapse-analytics-trigger-openapi.yml",
-    "_original/azure-synapse-analytics-workspace-openapi.yml"
+    "_original/azure-synapse-analytics-workspace-openapi.yml",
+    "_original/microsoft-azure-synapse-analytics-openapi.json"
   ],
   "outputs": [
     "microsoft-azure-synapse-analytics-roleassignments-api-openapi.yml",
@@ -67,7 +68,8 @@
     "microsoft-azure-synapse-analytics-trigger-api-openapi.yml",
     "microsoft-azure-synapse-analytics-workspaceaadadmins-api-openapi.yml",
     "microsoft-azure-synapse-analytics-workspacemanagedidentity-api-openapi.yml",
-    "microsoft-azure-synapse-analytics-workspaces-api-openapi.yml"
+    "microsoft-azure-synapse-analytics-workspaces-api-openapi.yml",
+    "microsoft-azure-synapse-analytics-webapps-api-openapi.yml"
   ],
   "archived": [
     "deleted 4 superseded output(s) from the previous generation"
@@ -75,7 +77,7 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "sourced from openapi/_original/ (30 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sourced from openapi/_original/ (31 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "azure-synapse-analytics-access-control-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "azure-synapse-analytics-azure-ad-only-auth-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "azure-synapse-analytics-credential-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
@@ -106,8 +108,10 @@
     "azure-synapse-analytics-synapse-link-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "azure-synapse-analytics-trigger-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "azure-synapse-analytics-workspace-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "microsoft-azure-synapse-analytics-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "microsoft-azure-synapse-analytics-openapi.json: declared missing tag: WebApps",
     "superseded outputs removed: microsoft-azure-synapse-analytics-git-integration-api-openapi.yml, microsoft-azure-synapse-analytics-private-endpoint-connections-api-openapi.yml, microsoft-azure-synapse-analytics-role-assignments-api-openapi.yml, microsoft-azure-synapse-analytics-sql-pools-api-openapi.yml",
-    "apis.yml register: written (+4 apis, 35 total)"
+    "apis.yml register: written (+5 apis, 36 total)"
   ],
   "skipped": [
     "microsoft-azure-synapse-analytics-azureadonlyauthentications-api-openapi.yml: previously refined output, superseded by openapi/_original/",
