@@ -1,4 +1,4 @@
-# Azure Synapse Analytics (microsoft-azure-synapse-analytics)
+# Azure Synapse Analytics
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,748 +66,262 @@
 
 Azure Synapse Analytics is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems. It brings together the best of SQL technologies used in enterprise data warehousing, Spark technologies for big data, and Pipelines for data integration and ETL/ELT.
 
-**APIs.json:** [https://azure.microsoft.com/en-us/services/synapse-analytics/](https://azure.microsoft.com/en-us/services/synapse-analytics/)
+**Areas:** Analytics · Apache Spark · Big Data · Data Integration · Data Warehouse · ETL · SQL
+
+## Azure Synapse Analytics on APIs.io
+
+Everything profiled for Azure Synapse Analytics is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/microsoft-azure-synapse-analytics/](https://apis.io/providers/microsoft-azure-synapse-analytics/)** — or go straight to one of the APIs or properties below.
+
+### APIs (35)
+
+- [Azure Synapse Analytics AzureADOnlyAuthentications API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-azureadonlyauthentications-api/) — The AzureADOnlyAuthentications API from Azure Synapse Analytics — 2 operation(s) for azureadonlyauthentications.
+- [Azure Synapse Analytics BigDataPools API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-bigdatapools-api/) — The BigDataPools API from Azure Synapse Analytics — 2 operation(s) for bigdatapools.
+- [Azure Synapse Analytics Credential API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-credential-api/) — The Credential API from Azure Synapse Analytics — 3 operation(s) for credential.
+- [Azure Synapse Analytics DataFlow API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-dataflow-api/) — The DataFlow API from Azure Synapse Analytics — 3 operation(s) for dataflow.
+- [Azure Synapse Analytics DataFlowDebugSession API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-dataflowdebugsession-api/) — The DataFlowDebugSession API from Azure Synapse Analytics — 5 operation(s) for dataflowdebugsession.
+- [Azure Synapse Analytics Dataset API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-dataset-api/) — The Dataset API from Azure Synapse Analytics — 3 operation(s) for dataset.
+- [Azure Synapse Analytics IntegrationRuntimes API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-integrationruntimes-api/) — The IntegrationRuntimes API from Azure Synapse Analytics — 2 operation(s) for integrationruntimes.
+- [Azure Synapse Analytics IpFirewallRules API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-ipfirewallrules-api/) — The IpFirewallRules API from Azure Synapse Analytics — 3 operation(s) for ipfirewallrules.
+- [Azure Synapse Analytics Keys API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-keys-api/) — The Keys API from Azure Synapse Analytics — 2 operation(s) for keys.
+- [Azure Synapse Analytics KqlScripts API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-kqlscripts-api/) — The KqlScripts API from Azure Synapse Analytics — 3 operation(s) for kqlscripts.
+- [Azure Synapse Analytics KustoPools API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-kustopools-api/) — The KustoPools API from Azure Synapse Analytics — 2 operation(s) for kustopools.
+- [Azure Synapse Analytics Library API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-library-api/) — The Library API from Azure Synapse Analytics — 3 operation(s) for library.
+- [Azure Synapse Analytics LinkConnection API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-linkconnection-api/) — The LinkConnection API from Azure Synapse Analytics — 6 operation(s) for linkconnection.
+- [Azure Synapse Analytics LinkedService API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-linkedservice-api/) — The LinkedService API from Azure Synapse Analytics — 3 operation(s) for linkedservice.
+- [Azure Synapse Analytics ManagedPrivateEndpoints API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-managedprivateendpoints-api/) — The ManagedPrivateEndpoints API from Azure Synapse Analytics — 2 operation(s) for managedprivateendpoints.
+- [Azure Synapse Analytics Monitoring API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-monitoring-api/) — The Monitoring API from Azure Synapse Analytics — 2 operation(s) for monitoring.
+- [Azure Synapse Analytics Notebook API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-notebook-api/) — The Notebook API from Azure Synapse Analytics — 4 operation(s) for notebook.
+- [Azure Synapse Analytics Pipeline API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-pipeline-api/) — The Pipeline API from Azure Synapse Analytics — 4 operation(s) for pipeline.
+- [Azure Synapse Analytics PrivateLinkHubs API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-privatelinkhubs-api/) — The PrivateLinkHubs API from Azure Synapse Analytics — 3 operation(s) for privatelinkhubs.
+- [Azure Synapse Analytics SparkBatch API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-sparkbatch-api/) — The SparkBatch API from Azure Synapse Analytics — 2 operation(s) for sparkbatch.
+- [Azure Synapse Analytics SparkConfiguration API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-sparkconfiguration-api/) — The SparkConfiguration API from Azure Synapse Analytics — 3 operation(s) for sparkconfiguration.
+- [Azure Synapse Analytics SparkJobDefinition API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-sparkjobdefinition-api/) — The SparkJobDefinition API from Azure Synapse Analytics — 5 operation(s) for sparkjobdefinition.
+- [Azure Synapse Analytics SparkSession API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-sparksession-api/) — The SparkSession API from Azure Synapse Analytics — 4 operation(s) for sparksession.
+- [Azure Synapse Analytics SqlPoolRestorePoints API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-sqlpoolrestorepoints-api/) — The SqlPoolRestorePoints API from Azure Synapse Analytics — 1 operation(s) for sqlpoolrestorepoints.
+- [Azure Synapse Analytics SqlPoolTransparentDataEncryption API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-sqlpooltransparentdataencryption-api/) — The SqlPoolTransparentDataEncryption API from Azure Synapse Analytics — 1 operation(s) for sqlpooltransparentdataencryption.
+- [Azure Synapse Analytics SqlScript API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-sqlscript-api/) — The SqlScript API from Azure Synapse Analytics — 3 operation(s) for sqlscript.
+- [Azure Synapse Analytics SynapseLink API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-synapselink-api/) — The SynapseLink API from Azure Synapse Analytics — 1 operation(s) for synapselink.
+- [Azure Synapse Analytics Trigger API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-trigger-api/) — The Trigger API from Azure Synapse Analytics — 7 operation(s) for trigger.
+- [Azure Synapse Analytics WorkspaceAadAdmins API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-workspaceaadadmins-api/) — The WorkspaceAadAdmins API from Azure Synapse Analytics — 1 operation(s) for workspaceaadadmins.
+- [Azure Synapse Analytics WorkspaceManagedIdentity API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-workspacemanagedidentity-api/) — The WorkspaceManagedIdentity API from Azure Synapse Analytics — 1 operation(s) for workspacemanagedidentity.
+- [Azure Synapse Analytics Workspaces API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-workspaces-api/) — The Workspaces API from Azure Synapse Analytics — 3 operation(s) for workspaces.
+- [Azure Synapse Analytics Git Integration API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-git-integration-api/) — The Git Integration API from Azure Synapse Analytics — 1 operation(s) for git integration.
+- [Azure Synapse Analytics Private Endpoint Connections API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-private-endpoint-connections-api/) — The Private Endpoint Connections API from Azure Synapse Analytics — 2 operation(s) for private endpoint connections.
+- [Azure Synapse Analytics Role Assignments API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-role-assignments-api/) — The Role Assignments API from Azure Synapse Analytics — 2 operation(s) for role assignments.
+- [Azure Synapse Analytics SQL Pools API](https://apis.io/apis/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-sql-pools-api/) — The SQL Pools API from Azure Synapse Analytics — 4 operation(s) for sql pools.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Arazzo workflows (12)
+
+Multi-step workflows that chain operations into a business task.
+
+- [Azure Synapse Analytics Build Data Integration Pipeline](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-build-data-integration-pipeline-workflow/)
+- [Azure Synapse Analytics Deploy and Run Pipeline](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-deploy-and-run-pipeline-workflow/)
+- [Azure Synapse Analytics Deploy and Start Trigger](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-deploy-and-start-trigger-workflow/)
+- [Azure Synapse Analytics Deploy and Execute Spark Job Definition](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-deploy-execute-spark-job-definition-workflow/)
+- [Azure Synapse Analytics Open Spark Session and Run Statement](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-open-spark-session-and-run-statement-workflow/)
+- [Azure Synapse Analytics Provision and Resume SQL Pool](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-provision-and-resume-sql-pool-workflow/)
+- [Azure Synapse Analytics Provision Linked Service and Dataset](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-provision-linked-service-and-dataset-workflow/)
+- [Azure Synapse Analytics Provision Spark Pool](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-provision-spark-pool-workflow/)
+- [Azure Synapse Analytics Publish and Verify Notebook](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-publish-and-verify-notebook-workflow/)
+- [Azure Synapse Analytics Publish and Verify SQL Script](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-publish-and-verify-sql-script-workflow/)
+- [Azure Synapse Analytics Submit and Poll Spark Batch Job](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-submit-and-poll-spark-batch-job-workflow/)
+- [Azure Synapse Analytics Subscribe Trigger to Events](https://apis.io/arazzos/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-subscribe-trigger-to-events-workflow/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Microsoft Azure Synapse Analytics Agentic Access](https://apis.io/agentic-access/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-agentic-access/)
+
+#### JSON Schema (135)
+
+The data models the API reads and writes.
+
+- [Azure Synapse Analytics Dataset](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-dataset/)
+- [Azure Synapse Analytics Firewall Rule](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-firewall-rule/)
+- [Azure Synapse Analytics Linked Service](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-linked-service/)
+- [Azure Synapse Analytics Notebook](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-notebook/)
+- [Azure Synapse Analytics Pipeline](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-pipeline/)
+- [Azure Synapse Analytics Role Assignment](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-role-assignment/)
+- [Azure Synapse Analytics Spark Batch Job](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-spark-batch-job/)
+- [Azure Synapse Analytics Spark Pool](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-spark-pool/)
+- [Azure Synapse Analytics SQL Pool](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-sql-pool/)
+- [Azure Synapse Analytics Trigger](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-trigger/)
+- [Azure Synapse Analytics Workspace](https://apis.io/schemas/microsoft-azure-synapse-analytics/azure-synapse-analytics-workspace/)
+- [Activity](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-activity/)
+- [AddDataFlowToDebugSessionResponse](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-adddataflowtodebugsessionresponse/)
+- [ArtifactRenameRequest](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-artifactrenamerequest/)
+- [AutoPauseProperties](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-autopauseproperties/)
+- [AutoScaleProperties](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-autoscaleproperties/)
+- [AzureADOnlyAuthentication](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-azureadonlyauthentication/)
+- [AzureADOnlyAuthenticationListResult](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-azureadonlyauthenticationlistresult/)
+- [BigDataPoolPatchInfo](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-bigdatapoolpatchinfo/)
+- [BigDataPoolResourceInfo](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-bigdatapoolresourceinfo/)
+- [BigDataPoolResourceInfoListResult](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-bigdatapoolresourceinfolistresult/)
+- [BigDataPoolResourceProperties](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-bigdatapoolresourceproperties/)
+- [CreateDataFlowDebugSessionRequest](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-createdataflowdebugsessionrequest/)
+- [CreateDataFlowDebugSessionResponse](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-createdataflowdebugsessionresponse/)
+- [CreateRunResponse](https://apis.io/schemas/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-createrunresponse/)
+- …and 110 more published on APIs.io
 
-## Tags
+#### JSON Structure (1)
 
-- Analytics
-- Apache Spark
-- Big Data
-- Data Integration
-- Data Warehouse
-- ETL
-- SQL
+Data models expressed in JSON Structure.
 
-## Timestamps
+- [Microsoft Azure Synapse Analytics Structure](https://apis.io/json-structure/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-structure/)
 
-- **Created:** 2024-01-01
-- **Modified:** 2026-05-19
+#### JSON-LD (1)
 
-## APIs
+Linked-data contexts for the provider's vocabulary.
 
-### Synapse Workspace API
+- [Azure Synapse Analytics Context](https://apis.io/jsonld/microsoft-azure-synapse-analytics/azure-synapse-analytics-context/)
 
-Manage Synapse workspaces including creation, configuration, and lifecycle management of analytics environments through Azure Resource Manager.
+#### Vocabulary (1)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/](https://learn.microsoft.com/en-us/rest/api/synapse/)
-- **Base URL:** `https://management.azure.com`
+The provider's domain terms, defined.
 
-#### Tags
+- [Azure Synapse Analytics Domain Vocabulary](https://apis.io/vocabularies/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-vocabulary/)
 
-- Management
-- Resource Manager
-- Workspace
+#### Collections (95)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/workspace)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Swagger](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json)
-- [OpenAPI](openapi/azure-synapse-analytics-workspace-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-workspace.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-workspace.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-workspace-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Azure Synapse Analytics - Access Control API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-access-control/)
+- [Azure Synapse Analytics - Azure AD Only Authentication API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-azure-ad-only-auth/)
+- [Azure Synapse Analytics - Credential API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-credential/)
+- [Azure Synapse Analytics - Data Flow API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-data-flow/)
+- [Azure Synapse Analytics - Data Flow Debug Session API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-data-flow-debug-session/)
+- [Azure Synapse Analytics - Dataset API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-dataset/)
+- [Azure Synapse Analytics - Firewall Rules API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-firewall-rules/)
+- [Azure Synapse Analytics - Git Integration API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-git-integration/)
+- [Azure Synapse Analytics - Integration Runtimes API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-integration-runtimes/)
+- [Azure Synapse Analytics - Keys API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-keys/)
+- [Azure Synapse Analytics - KQL Script API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-kql-script/)
+- [Azure Synapse Analytics - Kusto Pools API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-kusto-pools/)
+- [Azure Synapse Analytics - Library API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-library/)
+- [Azure Synapse Analytics - Link Connection API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-link-connection/)
+- [Azure Synapse Analytics - Linked Service API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-linked-service/)
+- [Azure Synapse Analytics - Managed Private Endpoints API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-managed-private-endpoints/)
+- [Azure Synapse Analytics - Monitoring API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-monitoring/)
+- [Azure Synapse Analytics - Notebook API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-notebook/)
+- [Azure Synapse Analytics - Pipeline API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-pipeline/)
+- [Azure Synapse Analytics - Private Endpoint Connections API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-private-endpoint-connections/)
+- [Azure Synapse Analytics - Private Link Hubs API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-private-link-hubs/)
+- [Azure Synapse Analytics - Spark Configuration API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-spark-configuration/)
+- [Azure Synapse Analytics - Spark Job API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-spark-job/)
+- [Azure Synapse Analytics - Spark Job Definition API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-spark-job-definition/)
+- [Azure Synapse Analytics - Spark Pools API](https://apis.io/collections/microsoft-azure-synapse-analytics/open-azure-synapse-analytics-spark-pools/)
+- …and 70 more published on APIs.io
 
-### Synapse SQL Pools API
+#### Governance rules (1)
 
-Manage dedicated SQL pools for enterprise data warehousing workloads including provisioning, scaling, pausing, and resuming compute resources.
+Spectral rulesets for the provider's contracts.
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools](https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools)
-- **Base URL:** `https://management.azure.com`
+- [Azure Synapse Analytics — jsonschema rules](https://apis.io/rules/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-jsonschema-spectral-rules/)
 
-#### Tags
+#### Security (2)
 
-- Data Warehouse
-- Resource Manager
-- SQL Pool
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Microsoft Azure Synapse Analytics Authentication](https://apis.io/security/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-authentication/)
+- [Microsoft Azure Synapse Analytics Domain Security](https://apis.io/security/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-domain-security/)
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/sqlpools)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-sql-pools-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-sql-pools.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-sql-pools.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-sql-pool-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+#### OAuth scopes (1)
 
-### Synapse Spark Pools API
+The permissions the API asks for.
 
-Manage Apache Spark pools for big data processing including pool creation, auto-scaling configuration, and Spark runtime version management.
+- [Microsoft Azure Synapse Analytics Scopes](https://apis.io/scopes/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-scopes/)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool](https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool)
-- **Base URL:** `https://management.azure.com`
+#### Plans and pricing (1)
 
-#### Tags
+Published plans, tiers and prices.
 
-- Apache Spark
-- Big Data
-- Resource Manager
-- Spark
+- [Microsoft Azure Synapse Analytics Plans Pricing](https://apis.io/plans/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/bigdatapool)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/bigDataPool.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-spark-pools-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-spark-pools.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-spark-pools.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-spark-pool-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+Published request limits.
 
-### Synapse Pipeline API
+- [Microsoft Azure Synapse Analytics Rate Limits](https://apis.io/rate-limits/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-rate-limits/)
 
-Create and manage data integration pipelines for ETL/ELT workflows. Supports orchestrating data movement and transformation activities across diverse data stores.
+#### FinOps (1)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
+What the API costs to run, by operation.
 
-#### Tags
+- [Microsoft Azure Synapse Analytics Finops](https://apis.io/finops/microsoft-azure-synapse-analytics/microsoft-azure-synapse-analytics-finops/)
 
-- Data Integration
-- Data Plane
-- ETL
-- Pipeline
+## Where to find this API
 
-#### Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-pipeline-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-pipeline.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-pipeline.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-pipeline-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Spark Job API
-
-Submit and manage Apache Spark batch jobs and interactive sessions. Provides operations for monitoring job status, retrieving logs, and cancelling running applications.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Batch Processing
-- Data Plane
-- Spark Jobs
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2019-11-01-preview/sparkJob.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-spark-job-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-spark-job.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-spark-job.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-spark-batch-job-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Monitoring API
-
-Monitor pipeline runs, Spark jobs, and SQL requests within a Synapse workspace. Provides visibility into execution status, performance metrics, and operational health.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Data Plane
-- Monitoring
-- Observability
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/monitoring)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/monitoring.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-monitoring-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-monitoring.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-monitoring.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Link API
-
-Manage Azure Synapse Link for real-time analytics over operational data. Enables hybrid transactional and analytical processing without impacting operational workloads.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- HTAP
-- Real-Time Analytics
-- Synapse Link
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/)
-- [OpenAPI](openapi/azure-synapse-analytics-synapse-link-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-synapse-link.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-synapse-link.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Access Control API
-
-Manage role assignments, role definitions, and access control for Synapse workspace resources. Supports Synapse role-based access control for fine-grained permissions.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Access Control
-- Data Plane
-- RBAC
-- Security
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/role-assignments)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/roleAssignments.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-access-control-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-access-control.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-access-control.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-role-assignment-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Notebook API
-
-Create, update, list, and delete notebooks within a Synapse workspace. Notebooks support interactive data exploration using Python, Scala, SQL, and .NET languages.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Artifacts
-- Data Exploration
-- Data Plane
-- Notebook
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/notebook)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-notebook-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-notebook.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-notebook.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-notebook-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Dataset API
-
-Create and manage datasets that represent data structures within linked data stores. Datasets define the schema and location of data used in pipelines and data flows.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Artifacts
-- Data Management
-- Data Plane
-- Dataset
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/dataset)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-dataset-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-dataset.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-dataset.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-dataset-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Linked Service API
-
-Create and manage linked services that define connection information to external data sources. Linked services act as connection strings for integrating with databases, storage, and other services.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Connectivity
-- Data Integration
-- Data Plane
-- Linked Service
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/linked-service)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-linked-service-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-linked-service.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-linked-service.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-linked-service-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Data Flow API
-
-Create and manage data flows for visual data transformation logic. Data flows enable code-free data transformation at scale within Synapse pipelines.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Data Flow
-- Data Plane
-- Data Transformation
-- ETL
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-data-flow-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-data-flow.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-data-flow.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse SQL Script API
-
-Create, update, list, and delete SQL scripts within a Synapse workspace. SQL scripts can target both dedicated and serverless SQL pools for querying and data management.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Artifacts
-- Data Plane
-- SQL
-- SQL Script
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/sql-script)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-sql-script-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-sql-script.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-sql-script.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Trigger API
-
-Create and manage triggers that orchestrate pipeline execution. Supports schedule-based, tumbling window, and event-based triggers for automated workflow execution.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Automation
-- Data Plane
-- Scheduling
-- Trigger
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/trigger)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-trigger-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-trigger.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-trigger.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-trigger-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Spark Job Definition API
-
-Create and manage Spark job definitions as reusable templates for batch processing. Spark job definitions encapsulate configuration, code, and dependencies for repeatable execution.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Artifacts
-- Batch Processing
-- Data Plane
-- Spark Job Definition
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-job-definition)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-spark-job-definition-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-spark-job-definition.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-spark-job-definition.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Managed Private Endpoints API
-
-Create and manage managed private endpoints within a Synapse managed virtual network. Enables secure, private connectivity to Azure resources without exposing traffic to the public internet.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Data Plane
-- Networking
-- Private Endpoints
-- Security
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/managed-private-endpoints)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/preview/2021-06-01-preview/managedPrivateEndpoints.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-managed-private-endpoints-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-managed-private-endpoints.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-managed-private-endpoints.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Integration Runtimes API
-
-Manage integration runtimes that provide the compute infrastructure for data integration activities. Supports Azure-hosted, self-hosted, and Azure-SSIS integration runtime types.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Compute
-- Data Integration
-- Data Plane
-- Integration Runtime
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/integration-runtimes)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-integration-runtimes-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-integration-runtimes.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-integration-runtimes.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Library API
-
-Manage workspace libraries including JAR files, Python wheels, and other packages used by Spark pools. Supports uploading, listing, and deleting library resources.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Data Plane
-- Library
-- Package Management
-- Spark
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/library)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-library-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-library.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-library.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Git Integration API
-
-Manage Git repository integration for Synapse workspaces. Enables source control for workspace artifacts including pipelines, notebooks, and data flows through Git-based version control.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Data Plane
-- DevOps
-- Git Integration
-- Source Control
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/git-integration)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/gitintegration.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-git-integration-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-git-integration.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-git-integration.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Firewall Rules API
-
-Manage IP firewall rules for Synapse workspaces to control network access. Supports creating, updating, and deleting server-level IP firewall rules for workspace security.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules](https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Firewall Rules
-- Network Security
-- Resource Manager
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/ip-firewall-rules)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/firewallRule.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-firewall-rules-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-firewall-rules.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-firewall-rules.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/azure-synapse-analytics-firewall-rule-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Keys API
-
-Manage workspace encryption keys for data protection at rest. Supports customer-managed key configuration for dedicated SQL pools and workspace-level encryption.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/keys](https://learn.microsoft.com/en-us/rest/api/synapse/keys)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Encryption Keys
-- Resource Manager
-- Security
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/keys)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/keys.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-keys-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-keys.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-keys.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Private Endpoint Connections API
-
-Manage private endpoint connections to Synapse workspaces. Enables approval and management of private link connections for secure access from virtual networks.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections](https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Networking
-- Private Endpoint
-- Resource Manager
-- Security
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/private-endpoint-connections)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/privateEndpointConnections.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-private-endpoint-connections-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-private-endpoint-connections.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-private-endpoint-connections.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Private Link Hubs API
-
-Manage private link hubs that enable connecting to Synapse Studio through Azure Private Link. Provides centralized private connectivity for workspace management operations.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs](https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Networking
-- Private Link Hub
-- Resource Manager
-- Security
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/private-link-hubs)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/privatelinkhub.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-private-link-hubs-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-private-link-hubs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-private-link-hubs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Kusto Pools API
-
-Manage Data Explorer (Kusto) pools within a Synapse workspace for real-time log and telemetry analytics. Supports creating pools, databases, and managing data connections.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools](https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Data Explorer
-- Kusto Pool
-- Real-Time Analytics
-- Resource Manager
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/kusto-pools)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/kustoPool.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-kusto-pools-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-kusto-pools.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-kusto-pools.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Azure AD Only Authentication API
-
-Manage Azure Active Directory only authentication settings for Synapse workspaces. Enables enforcing Azure AD authentication and disabling SQL authentication for enhanced security.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications](https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Authentication
-- Azure Active Directory
-- Resource Manager
-- Security
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/azure-ad-only-authentications)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/azureADOnlyAuthentication.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-azure-ad-only-auth-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-azure-ad-only-auth.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-azure-ad-only-auth.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Spark Configuration API
-
-Create and manage reusable Spark configuration artifacts for Synapse Spark pools. Supports defining Spark properties, environment variables, and package requirements as shareable configurations.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Configuration
-- Data Plane
-- Spark
-- Spark Configuration
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/spark-configuration)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/preview/2021-06-01-preview/sparkConfigurations.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-spark-configuration-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-spark-configuration.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-spark-configuration.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Data Flow Debug Session API
-
-Manage data flow debug sessions for interactive testing and debugging of data flow transformations. Enables previewing data and validating transformation logic before deployment.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Data Flow Debug
-- Data Plane
-- Data Transformation
-- Debugging
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/data-flow-debug-session)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-data-flow-debug-session-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-data-flow-debug-session.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-data-flow-debug-session.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Credential API
-
-Manage credential artifacts used for authenticating with external data sources in Synapse workspaces. Supports creating and managing credentials referenced by linked services and datasets.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Authentication
-- Credential
-- Data Plane
-- Security
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/credential)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/stable/2020-12-01/artifacts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-credential-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-credential.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-credential.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse KQL Script API
-
-Create and manage KQL (Kusto Query Language) scripts for querying Data Explorer pools. Supports authoring and storing KQL queries as workspace artifacts.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Data Explorer
-- Data Plane
-- KQL Script
-- Kusto
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/kql-script)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/preview/2021-11-01-preview/kqlScripts.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-kql-script-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-kql-script.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-kql-script.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Synapse Link Connection API
-
-Manage Synapse Link connections for continuous data replication from operational databases. Supports configuring and monitoring real-time data synchronization from sources like Azure Cosmos DB and Azure SQL.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection)
-- **Base URL:** `https://{workspaceName}.dev.azuresynapse.net`
-
-#### Tags
-
-- Data Plane
-- Data Replication
-- Link Connection
-- Real-Time Analytics
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/link-connection)
-- [OpenAPI](https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/synapse/data-plane/Microsoft.Synapse/preview/2023-04-18-preview/linkConnections.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/azure-synapse-analytics-link-connection-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/azure-synapse-analytics-link-connection.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/azure-synapse-analytics-link-connection.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON-LD](json-ld/azure-synapse-analytics-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-## Common Properties
-
-- [Arazzo Workflows](arazzo/) — [Arazzo Specification](https://spec.openapis.org/arazzo/latest.html)
-- [Portal](https://portal.azure.com/)
+- [Website](https://azure.microsoft.com/en-us/products/synapse-analytics)
 - [Documentation](https://learn.microsoft.com/en-us/azure/synapse-analytics/)
-- [Getting Started](https://learn.microsoft.com/en-us/azure/synapse-analytics/get-started)
-- [Authentication](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-security-overview)
+- [Getting started](https://learn.microsoft.com/en-us/azure/synapse-analytics/get-started)
+- [Pricing](https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/)
+- [Support](https://azure.microsoft.com/en-us/support/)
 - [Changelog](https://learn.microsoft.com/en-us/azure/synapse-analytics/whats-new)
 - [Blog](https://techcommunity.microsoft.com/category/azuredatabases/blog/azuresynapseanalyticsblog)
-- [Status Page](https://status.azure.com/)
-- [Pricing](https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/)
-- [Best  Practices](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-best-practices)
 - [Security](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-security-overview)
-- [Support](https://azure.microsoft.com/en-us/support/)
-- [Terms of Service](https://azure.microsoft.com/en-us/support/legal/)
-- [Privacy Policy](https://privacy.microsoft.com/en-us/privacystatement)
-- [GitHub Organization](https://github.com/Azure)
-- [S D Ks](https://learn.microsoft.com/en-us/azure/synapse-analytics/)
-- [S D K -  Python](https://pypi.org/project/azure-synapse-artifacts/)
-- [S D K - . N E T](https://www.nuget.org/packages/Azure.ResourceManager.Synapse/)
-- [S D K -  Java](https://learn.microsoft.com/en-us/java/api/overview/azure/analytics-synapse-artifacts-readme)
-- [S D K -  Java Script](https://www.npmjs.com/package/@azure/synapse-artifacts)
-- [Community](https://techcommunity.microsoft.com/category/azuredatabases/blog/azuresynapseanalyticsblog)
-- [Website](https://azure.microsoft.com/en-us/products/synapse-analytics)
-- [Login](https://portal.azure.com/)
-- [Sign Up](https://azure.microsoft.com/en-us/free/)
+- [Terms of service](https://azure.microsoft.com/en-us/support/legal/)
+- [Privacy policy](https://privacy.microsoft.com/en-us/privacystatement)
+- [GitHub](https://github.com/Azure)
+- [Status](https://status.azure.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com/
+**Kin Score 58.2** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 59.0 |
+| Contract governance | 9.8 |
+| Operational transparency | 42.1 |
+| Developer ergonomics | 46.4 |
+| Access clarity | 76.3 |
+
+**Agent readiness 21.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/microsoft-azure-synapse-analytics/](https://apis.io/providers/microsoft-azure-synapse-analytics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Azure Synapse Analytics: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/microsoft-azure-synapse-analytics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
